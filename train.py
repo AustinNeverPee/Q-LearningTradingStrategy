@@ -6,12 +6,16 @@ Modified Date: Mar. 6 2017
 """
 
 
+import pytz
+from datetime import datetime
 from zipline.api import order, record, symbol, history
 import random
 
 from pybrain.datasets import SupervisedDataSet
 
 from utils import *
+
+import pdb
 
 
 def initialize_train(context):
@@ -21,10 +25,13 @@ def initialize_train(context):
     # Counter for days
     context.counter = 0
 
+    start = datetime(2011, 1, 1, 0, 0, 0, 0, pytz.utc)
+
     print('here!!!!')
     print(directory_log)
 
 def handle_data_train(context, data):
+    pdb.set_trace()
     # Skip first 21 days to get full windows
     context.counter += 1
     if context.counter < 21:

@@ -39,18 +39,18 @@ def initialize_log():
 def load_data():
     # Load data manually from Yahoo! finance
     # Training data
-    start_train = datetime(2010, 1, 1, 0, 0, 0, 0, pytz.utc)
-    end_train = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
-    data_train = load_bars_from_yahoo(stocks=['AAPL'],
-                                      start=start_train,
-                                      end=end_train)
+    start_train_data = datetime(2010, 1, 1, 0, 0, 0, 0, pytz.utc)
+    end_train_data = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
+    data_train = load_bars_from_yahoo(stocks = ['AAPL'],
+                                      start = start_train_data,
+                                      end = end_train_data)
 
     # Testing data
-    start_test = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
-    end_test = datetime(2016, 1, 1, 0, 0, 0, 0, pytz.utc)
-    data_test = load_bars_from_yahoo(stocks=['AAPL'],
-                                     start=start_test,
-                                     end=end_test)
+    start_test_data = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
+    end_test_data = datetime(2016, 1, 1, 0, 0, 0, 0, pytz.utc)
+    data_test = load_bars_from_yahoo(stocks = ['AAPL'],
+                                     start = start_test_data,
+                                     end = end_test_data)
 
     return [data_train, data_test]
 
@@ -66,10 +66,12 @@ def agent_train(data_train):
         
         # Create algorithm object passing in initialize, 
         # handle_data functions and so on
-        algo = TradingAlgorithm(initialize=initialize_train, 
-                                handle_data=handle_data_train,
-                                data_frequency='daily',
-                                capital_base=capital_base)
+        # start_train = datetime(2011, 1, 1, 0, 0, 0, 0, pytz.utc)
+        # end_train = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
+        algo = TradingAlgorithm(initialize = initialize_train, 
+                                handle_data = handle_data_train,
+                                data_frequency = 'daily',
+                                capital_base = capital_base)
         
         # Run algorithm
         perf = algo.run(data_train)
@@ -83,10 +85,12 @@ def agent_train(data_train):
 def agent_test(data_test):
     # Create algorithm object passing in initialize and
     # handle_data functions
-    algo_obj = TradingAlgorithm(initialize=initialize_test, 
-                                handle_data=handle_data_test,
+    # start_test = datetime(2015, 1, 1, 0, 0, 0, 0, pytz.utc)
+    # end_test = datetime(2016, 1, 1, 0, 0, 0, 0, pytz.utc)
+    algo_obj = TradingAlgorithm(initialize = initialize_test, 
+                                handle_data = handle_data_test,
                                 analyze = analyze_test,
-                                data_frequency='daily',
+                                data_frequency = 'daily',
                                 capital_base = capital_base)
     
     # Run algorithm

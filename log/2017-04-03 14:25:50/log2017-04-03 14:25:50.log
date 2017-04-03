@@ -1,0 +1,986 @@
+2017-04-03 14:26:04,618 - mylogger - INFO - 2014-01-31: buy
+2017-04-03 14:26:04,618 - mylogger - INFO - 100000.0
+2017-04-03 14:26:04,628 - mylogger - INFO - 2014-02-03: buy
+2017-04-03 14:26:04,628 - mylogger - INFO - 93278.8158
+2017-04-03 14:26:04,640 - mylogger - INFO - 2014-02-04: buy
+2017-04-03 14:26:04,640 - mylogger - INFO - 86460.3517
+2017-04-03 14:26:04,650 - mylogger - INFO - 2014-02-05: hold
+2017-04-03 14:26:04,664 - mylogger - INFO - 2014-02-06: buy
+2017-04-03 14:26:04,664 - mylogger - INFO - 79590.9703
+2017-04-03 14:26:04,682 - mylogger - INFO - 2014-02-07: buy
+2017-04-03 14:26:04,682 - mylogger - INFO - 72584.9067
+2017-04-03 14:26:04,694 - mylogger - INFO - 2014-02-10: buy
+2017-04-03 14:26:04,694 - mylogger - INFO - 65453.3481
+2017-04-03 14:26:04,705 - mylogger - INFO - 2014-02-11: buy
+2017-04-03 14:26:04,705 - mylogger - INFO - 58227.8371
+2017-04-03 14:26:04,720 - mylogger - INFO - 2014-02-12: buy
+2017-04-03 14:26:04,720 - mylogger - INFO - 51002.8653
+2017-04-03 14:26:04,734 - mylogger - INFO - 2014-02-13: buy
+2017-04-03 14:26:04,734 - mylogger - INFO - 43663.1824
+2017-04-03 14:26:04,747 - mylogger - INFO - 2014-02-14: hold
+2017-04-03 14:26:04,758 - mylogger - INFO - 2014-02-18: buy
+2017-04-03 14:26:04,758 - mylogger - INFO - 36329.4299
+2017-04-03 14:26:04,768 - mylogger - INFO - 2014-02-19: hold
+2017-04-03 14:26:04,782 - mylogger - INFO - 2014-02-20: buy
+2017-04-03 14:26:04,782 - mylogger - INFO - 29084.9124
+2017-04-03 14:26:04,797 - mylogger - INFO - 2014-02-21: hold
+2017-04-03 14:26:04,806 - mylogger - INFO - 2014-02-24: buy
+2017-04-03 14:26:04,807 - mylogger - INFO - 22003.7675
+2017-04-03 14:26:04,816 - mylogger - INFO - 2014-02-25: hold
+2017-04-03 14:26:04,826 - mylogger - INFO - 2014-02-26: buy
+2017-04-03 14:26:04,826 - mylogger - INFO - 14965.6221
+2017-04-03 14:26:04,840 - mylogger - INFO - 2014-02-27: buy
+2017-04-03 14:26:04,840 - mylogger - INFO - 7851.85619998
+2017-04-03 14:26:04,857 - mylogger - INFO - 2014-02-28: No cover!
+2017-04-03 14:26:04,867 - mylogger - INFO - 2014-03-03: No cover!
+2017-04-03 14:26:04,876 - mylogger - INFO - 2014-03-04: No cover!
+2017-04-03 14:26:04,886 - mylogger - INFO - 2014-03-05: No cover!
+2017-04-03 14:26:04,899 - mylogger - INFO - 2014-03-06: No cover!
+2017-04-03 14:26:04,913 - mylogger - INFO - 2014-03-07: No cover!
+2017-04-03 14:26:04,923 - mylogger - INFO - 2014-03-10: No cover!
+2017-04-03 14:26:04,933 - mylogger - INFO - 2014-03-11: No cover!
+2017-04-03 14:26:04,942 - mylogger - INFO - 2014-03-12: No cover!
+2017-04-03 14:26:04,955 - mylogger - INFO - 2014-03-13: No cover!
+2017-04-03 14:26:04,969 - mylogger - INFO - 2014-03-14: hold
+2017-04-03 14:26:04,978 - mylogger - INFO - 2014-03-17: No cover!
+2017-04-03 14:26:04,988 - mylogger - INFO - 2014-03-18: No cover!
+2017-04-03 14:26:04,997 - mylogger - INFO - 2014-03-19: No cover!
+2017-04-03 14:26:05,009 - mylogger - INFO - 2014-03-20: No cover!
+2017-04-03 14:26:05,022 - mylogger - INFO - 2014-03-21: No cover!
+2017-04-03 14:26:05,030 - mylogger - INFO - 2014-03-24: No cover!
+2017-04-03 14:26:05,040 - mylogger - INFO - 2014-03-25: No cover!
+2017-04-03 14:26:05,049 - mylogger - INFO - 2014-03-26: No cover!
+2017-04-03 14:26:05,060 - mylogger - INFO - 2014-03-27: No cover!
+2017-04-03 14:26:05,072 - mylogger - INFO - 2014-03-28: No cover!
+2017-04-03 14:26:05,081 - mylogger - INFO - 2014-03-31: No cover!
+2017-04-03 14:26:05,092 - mylogger - INFO - 2014-04-01: No cover!
+2017-04-03 14:26:05,103 - mylogger - INFO - 2014-04-02: No cover!
+2017-04-03 14:26:05,115 - mylogger - INFO - 2014-04-03: hold
+2017-04-03 14:26:05,124 - mylogger - INFO - 2014-04-04: No cover!
+2017-04-03 14:26:05,133 - mylogger - INFO - 2014-04-07: No cover!
+2017-04-03 14:26:05,142 - mylogger - INFO - 2014-04-08: No cover!
+2017-04-03 14:26:05,153 - mylogger - INFO - 2014-04-09: No cover!
+2017-04-03 14:26:05,166 - mylogger - INFO - 2014-04-10: No cover!
+2017-04-03 14:26:05,174 - mylogger - INFO - 2014-04-11: No cover!
+2017-04-03 14:26:05,183 - mylogger - INFO - 2014-04-14: No cover!
+2017-04-03 14:26:05,192 - mylogger - INFO - 2014-04-15: No cover!
+2017-04-03 14:26:05,203 - mylogger - INFO - 2014-04-16: No cover!
+2017-04-03 14:26:05,216 - mylogger - INFO - 2014-04-17: No cover!
+2017-04-03 14:26:05,226 - mylogger - INFO - 2014-04-21: No cover!
+2017-04-03 14:26:05,235 - mylogger - INFO - 2014-04-22: No cover!
+2017-04-03 14:26:05,245 - mylogger - INFO - 2014-04-23: No cover!
+2017-04-03 14:26:05,256 - mylogger - INFO - 2014-04-24: No cover!
+2017-04-03 14:26:05,268 - mylogger - INFO - 2014-04-25: hold
+2017-04-03 14:26:05,276 - mylogger - INFO - 2014-04-28: No cover!
+2017-04-03 14:26:05,285 - mylogger - INFO - 2014-04-29: hold
+2017-04-03 14:26:05,294 - mylogger - INFO - 2014-04-30: hold
+2017-04-03 14:26:05,303 - mylogger - INFO - 2014-05-01: hold
+2017-04-03 14:26:05,315 - mylogger - INFO - 2014-05-02: No cover!
+2017-04-03 14:26:05,325 - mylogger - INFO - 2014-05-05: hold
+2017-04-03 14:26:05,333 - mylogger - INFO - 2014-05-06: hold
+2017-04-03 14:26:05,342 - mylogger - INFO - 2014-05-07: hold
+2017-04-03 14:26:05,353 - mylogger - INFO - 2014-05-08: No cover!
+2017-04-03 14:26:05,366 - mylogger - INFO - 2014-05-09: hold
+2017-04-03 14:26:05,379 - mylogger - INFO - 2014-05-12: No cover!
+2017-04-03 14:26:05,392 - mylogger - INFO - 2014-05-13: No cover!
+2017-04-03 14:26:05,404 - mylogger - INFO - 2014-05-14: hold
+2017-04-03 14:26:05,419 - mylogger - INFO - 2014-05-15: No cover!
+2017-04-03 14:26:05,429 - mylogger - INFO - 2014-05-16: hold
+2017-04-03 14:26:05,440 - mylogger - INFO - 2014-05-19: No cover!
+2017-04-03 14:26:05,449 - mylogger - INFO - 2014-05-20: No cover!
+2017-04-03 14:26:05,460 - mylogger - INFO - 2014-05-21: No cover!
+2017-04-03 14:26:05,472 - mylogger - INFO - 2014-05-22: No cover!
+2017-04-03 14:26:05,481 - mylogger - INFO - 2014-05-23: No cover!
+2017-04-03 14:26:05,491 - mylogger - INFO - 2014-05-27: No cover!
+2017-04-03 14:26:05,501 - mylogger - INFO - 2014-05-28: hold
+2017-04-03 14:26:05,513 - mylogger - INFO - 2014-05-29: No cover!
+2017-04-03 14:26:05,527 - mylogger - INFO - 2014-05-30: hold
+2017-04-03 14:26:05,536 - mylogger - INFO - 2014-06-02: No cover!
+2017-04-03 14:26:05,546 - mylogger - INFO - 2014-06-03: No cover!
+2017-04-03 14:26:05,554 - mylogger - INFO - 2014-06-04: hold
+2017-04-03 14:26:05,565 - mylogger - INFO - 2014-06-05: No cover!
+2017-04-03 14:26:05,577 - mylogger - INFO - 2014-06-06: No cover!
+2017-04-03 14:26:05,587 - mylogger - INFO - 2014-06-09: No cover!
+2017-04-03 14:26:05,595 - mylogger - INFO - 2014-06-10: hold
+2017-04-03 14:26:05,605 - mylogger - INFO - 2014-06-11: No cover!
+2017-04-03 14:26:05,615 - mylogger - INFO - 2014-06-12: No cover!
+2017-04-03 14:26:05,627 - mylogger - INFO - 2014-06-13: No cover!
+2017-04-03 14:26:05,637 - mylogger - INFO - 2014-06-16: No cover!
+2017-04-03 14:26:05,646 - mylogger - INFO - 2014-06-17: No cover!
+2017-04-03 14:26:05,656 - mylogger - INFO - 2014-06-18: No cover!
+2017-04-03 14:26:05,668 - mylogger - INFO - 2014-06-19: No cover!
+2017-04-03 14:26:05,677 - mylogger - INFO - 2014-06-20: No cover!
+2017-04-03 14:26:05,688 - mylogger - INFO - 2014-06-23: No cover!
+2017-04-03 14:26:05,697 - mylogger - INFO - 2014-06-24: No cover!
+2017-04-03 14:26:05,706 - mylogger - INFO - 2014-06-25: No cover!
+2017-04-03 14:26:05,719 - mylogger - INFO - 2014-06-26: No cover!
+2017-04-03 14:26:05,729 - mylogger - INFO - 2014-06-27: No cover!
+2017-04-03 14:26:05,738 - mylogger - INFO - 2014-06-30: No cover!
+2017-04-03 14:26:05,748 - mylogger - INFO - 2014-07-01: No cover!
+2017-04-03 14:26:05,758 - mylogger - INFO - 2014-07-02: No cover!
+2017-04-03 14:26:05,770 - mylogger - INFO - 2014-07-03: No cover!
+2017-04-03 14:26:05,779 - mylogger - INFO - 2014-07-07: No cover!
+2017-04-03 14:26:05,789 - mylogger - INFO - 2014-07-08: No cover!
+2017-04-03 14:26:05,798 - mylogger - INFO - 2014-07-09: No cover!
+2017-04-03 14:26:05,807 - mylogger - INFO - 2014-07-10: hold
+2017-04-03 14:26:05,820 - mylogger - INFO - 2014-07-11: No cover!
+2017-04-03 14:26:05,829 - mylogger - INFO - 2014-07-14: No cover!
+2017-04-03 14:26:05,840 - mylogger - INFO - 2014-07-15: No cover!
+2017-04-03 14:26:05,852 - mylogger - INFO - 2014-07-16: No cover!
+2017-04-03 14:26:05,863 - mylogger - INFO - 2014-07-17: hold
+2017-04-03 14:26:05,877 - mylogger - INFO - 2014-07-18: No cover!
+2017-04-03 14:26:05,887 - mylogger - INFO - 2014-07-21: No cover!
+2017-04-03 14:26:05,897 - mylogger - INFO - 2014-07-22: No cover!
+2017-04-03 14:26:05,908 - mylogger - INFO - 2014-07-23: No cover!
+2017-04-03 14:26:05,923 - mylogger - INFO - 2014-07-24: No cover!
+2017-04-03 14:26:05,934 - mylogger - INFO - 2014-07-25: No cover!
+2017-04-03 14:26:05,943 - mylogger - INFO - 2014-07-28: No cover!
+2017-04-03 14:26:05,956 - mylogger - INFO - 2014-07-29: hold
+2017-04-03 14:26:05,972 - mylogger - INFO - 2014-07-30: No cover!
+2017-04-03 14:26:05,985 - mylogger - INFO - 2014-07-31: No cover!
+2017-04-03 14:26:05,997 - mylogger - INFO - 2014-08-01: No cover!
+2017-04-03 14:26:06,011 - mylogger - INFO - 2014-08-04: hold
+2017-04-03 14:26:06,027 - mylogger - INFO - 2014-08-05: No cover!
+2017-04-03 14:26:06,041 - mylogger - INFO - 2014-08-06: No cover!
+2017-04-03 14:26:06,055 - mylogger - INFO - 2014-08-07: No cover!
+2017-04-03 14:26:06,072 - mylogger - INFO - 2014-08-08: No cover!
+2017-04-03 14:26:06,090 - mylogger - INFO - 2014-08-11: No cover!
+2017-04-03 14:26:06,102 - mylogger - INFO - 2014-08-12: No cover!
+2017-04-03 14:26:06,114 - mylogger - INFO - 2014-08-13: No cover!
+2017-04-03 14:26:06,126 - mylogger - INFO - 2014-08-14: hold
+2017-04-03 14:26:06,141 - mylogger - INFO - 2014-08-15: No cover!
+2017-04-03 14:26:06,152 - mylogger - INFO - 2014-08-18: No cover!
+2017-04-03 14:26:06,164 - mylogger - INFO - 2014-08-19: No cover!
+2017-04-03 14:26:06,178 - mylogger - INFO - 2014-08-20: No cover!
+2017-04-03 14:26:06,191 - mylogger - INFO - 2014-08-21: No cover!
+2017-04-03 14:26:06,200 - mylogger - INFO - 2014-08-22: No cover!
+2017-04-03 14:26:06,212 - mylogger - INFO - 2014-08-25: No cover!
+2017-04-03 14:26:06,224 - mylogger - INFO - 2014-08-26: hold
+2017-04-03 14:26:06,239 - mylogger - INFO - 2014-08-27: No cover!
+2017-04-03 14:26:06,250 - mylogger - INFO - 2014-08-28: hold
+2017-04-03 14:26:06,262 - mylogger - INFO - 2014-08-29: No cover!
+2017-04-03 14:26:06,275 - mylogger - INFO - 2014-09-02: No cover!
+2017-04-03 14:26:06,292 - mylogger - INFO - 2014-09-03: hold
+2017-04-03 14:26:06,309 - mylogger - INFO - 2014-09-04: No cover!
+2017-04-03 14:26:06,331 - mylogger - INFO - 2014-09-05: No cover!
+2017-04-03 14:26:06,359 - mylogger - INFO - 2014-09-08: No cover!
+2017-04-03 14:26:06,377 - mylogger - INFO - 2014-09-09: No cover!
+2017-04-03 14:26:06,405 - mylogger - INFO - 2014-09-10: No cover!
+2017-04-03 14:26:06,439 - mylogger - INFO - 2014-09-11: hold
+2017-04-03 14:26:06,462 - mylogger - INFO - 2014-09-12: No cover!
+2017-04-03 14:26:06,497 - mylogger - INFO - 2014-09-15: No cover!
+2017-04-03 14:26:06,518 - mylogger - INFO - 2014-09-16: No cover!
+2017-04-03 14:26:06,549 - mylogger - INFO - 2014-09-17: hold
+2017-04-03 14:26:06,577 - mylogger - INFO - 2014-09-18: No cover!
+2017-04-03 14:26:06,611 - mylogger - INFO - 2014-09-19: No cover!
+2017-04-03 14:26:06,643 - mylogger - INFO - 2014-09-22: hold
+2017-04-03 14:26:06,659 - mylogger - INFO - 2014-09-23: No cover!
+2017-04-03 14:26:06,683 - mylogger - INFO - 2014-09-24: No cover!
+2017-04-03 14:26:06,710 - mylogger - INFO - 2014-09-25: No cover!
+2017-04-03 14:26:06,727 - mylogger - INFO - 2014-09-26: No cover!
+2017-04-03 14:26:06,749 - mylogger - INFO - 2014-09-29: hold
+2017-04-03 14:26:06,768 - mylogger - INFO - 2014-09-30: No cover!
+2017-04-03 14:26:06,804 - mylogger - INFO - 2014-10-01: No cover!
+2017-04-03 14:26:06,858 - mylogger - INFO - 2014-10-02: No cover!
+2017-04-03 14:26:06,889 - mylogger - INFO - 2014-10-03: hold
+2017-04-03 14:26:06,901 - mylogger - INFO - 2014-10-06: No cover!
+2017-04-03 14:26:06,923 - mylogger - INFO - 2014-10-07: No cover!
+2017-04-03 14:26:06,938 - mylogger - INFO - 2014-10-08: No cover!
+2017-04-03 14:26:06,954 - mylogger - INFO - 2014-10-09: hold
+2017-04-03 14:26:06,971 - mylogger - INFO - 2014-10-10: No cover!
+2017-04-03 14:26:06,990 - mylogger - INFO - 2014-10-13: No cover!
+2017-04-03 14:26:07,013 - mylogger - INFO - 2014-10-14: No cover!
+2017-04-03 14:26:07,027 - mylogger - INFO - 2014-10-15: No cover!
+2017-04-03 14:26:07,041 - mylogger - INFO - 2014-10-16: No cover!
+2017-04-03 14:26:07,054 - mylogger - INFO - 2014-10-17: No cover!
+2017-04-03 14:26:07,075 - mylogger - INFO - 2014-10-20: No cover!
+2017-04-03 14:26:07,087 - mylogger - INFO - 2014-10-21: No cover!
+2017-04-03 14:26:07,096 - mylogger - INFO - 2014-10-22: No cover!
+2017-04-03 14:26:07,108 - mylogger - INFO - 2014-10-23: No cover!
+2017-04-03 14:26:07,127 - mylogger - INFO - 2014-10-24: hold
+2017-04-03 14:26:07,142 - mylogger - INFO - 2014-10-27: No cover!
+2017-04-03 14:26:07,151 - mylogger - INFO - 2014-10-28: No cover!
+2017-04-03 14:26:07,167 - mylogger - INFO - 2014-10-29: No cover!
+2017-04-03 14:26:07,179 - mylogger - INFO - 2014-10-30: hold
+2017-04-03 14:26:07,191 - mylogger - INFO - 2014-10-31: hold
+2017-04-03 14:26:07,200 - mylogger - INFO - 2014-11-03: No cover!
+2017-04-03 14:26:07,217 - mylogger - INFO - 2014-11-04: No cover!
+2017-04-03 14:26:07,230 - mylogger - INFO - 2014-11-05: No cover!
+2017-04-03 14:26:07,244 - mylogger - INFO - 2014-11-06: No cover!
+2017-04-03 14:26:07,255 - mylogger - INFO - 2014-11-07: No cover!
+2017-04-03 14:26:07,272 - mylogger - INFO - 2014-11-10: hold
+2017-04-03 14:26:07,284 - mylogger - INFO - 2014-11-11: No cover!
+2017-04-03 14:26:07,303 - mylogger - INFO - 2014-11-12: hold
+2017-04-03 14:26:07,320 - mylogger - INFO - 2014-11-13: No cover!
+2017-04-03 14:26:07,330 - mylogger - INFO - 2014-11-14: No cover!
+2017-04-03 14:26:07,344 - mylogger - INFO - 2014-11-17: No cover!
+2017-04-03 14:26:07,356 - mylogger - INFO - 2014-11-18: No cover!
+2017-04-03 14:26:07,372 - mylogger - INFO - 2014-11-19: No cover!
+2017-04-03 14:26:07,383 - mylogger - INFO - 2014-11-20: No cover!
+2017-04-03 14:26:07,397 - mylogger - INFO - 2014-11-21: hold
+2017-04-03 14:26:07,424 - mylogger - INFO - 2014-11-24: No cover!
+2017-04-03 14:26:07,441 - mylogger - INFO - 2014-11-25: hold
+2017-04-03 14:26:07,453 - mylogger - INFO - 2014-11-26: No cover!
+2017-04-03 14:26:07,468 - mylogger - INFO - 2014-11-28: hold
+2017-04-03 14:26:07,478 - mylogger - INFO - 2014-12-01: hold
+2017-04-03 14:26:07,492 - mylogger - INFO - 2014-12-02: No cover!
+2017-04-03 14:26:07,503 - mylogger - INFO - 2014-12-03: No cover!
+2017-04-03 14:26:07,519 - mylogger - INFO - 2014-12-04: hold
+2017-04-03 14:26:07,535 - mylogger - INFO - 2014-12-05: No cover!
+2017-04-03 14:26:07,548 - mylogger - INFO - 2014-12-08: No cover!
+2017-04-03 14:26:07,563 - mylogger - INFO - 2014-12-09: No cover!
+2017-04-03 14:26:07,576 - mylogger - INFO - 2014-12-10: No cover!
+2017-04-03 14:26:07,587 - mylogger - INFO - 2014-12-11: No cover!
+2017-04-03 14:26:07,601 - mylogger - INFO - 2014-12-12: No cover!
+2017-04-03 14:26:07,616 - mylogger - INFO - 2014-12-15: hold
+2017-04-03 14:26:07,627 - mylogger - INFO - 2014-12-16: No cover!
+2017-04-03 14:26:07,638 - mylogger - INFO - 2014-12-17: No cover!
+2017-04-03 14:26:07,651 - mylogger - INFO - 2014-12-18: No cover!
+2017-04-03 14:26:07,668 - mylogger - INFO - 2014-12-19: No cover!
+2017-04-03 14:26:07,679 - mylogger - INFO - 2014-12-22: No cover!
+2017-04-03 14:26:07,689 - mylogger - INFO - 2014-12-23: No cover!
+2017-04-03 14:26:07,702 - mylogger - INFO - 2014-12-24: No cover!
+2017-04-03 14:26:07,720 - mylogger - INFO - 2014-12-26: No cover!
+2017-04-03 14:26:07,731 - mylogger - INFO - 2014-12-29: No cover!
+2017-04-03 14:26:07,743 - mylogger - INFO - 2014-12-30: hold
+2017-04-03 14:26:07,754 - mylogger - INFO - 2014-12-31: No cover!
+2017-04-03 14:26:07,768 - mylogger - INFO - 2015-01-02: hold
+2017-04-03 14:26:07,778 - mylogger - INFO - 2015-01-05: hold
+2017-04-03 14:26:07,789 - mylogger - INFO - 2015-01-06: No cover!
+2017-04-03 14:26:07,803 - mylogger - INFO - 2015-01-07: No cover!
+2017-04-03 14:26:07,820 - mylogger - INFO - 2015-01-08: No cover!
+2017-04-03 14:26:07,834 - mylogger - INFO - 2015-01-09: No cover!
+2017-04-03 14:26:07,847 - mylogger - INFO - 2015-01-12: No cover!
+2017-04-03 14:26:07,859 - mylogger - INFO - 2015-01-13: hold
+2017-04-03 14:26:07,873 - mylogger - INFO - 2015-01-14: No cover!
+2017-04-03 14:26:07,884 - mylogger - INFO - 2015-01-15: No cover!
+2017-04-03 14:26:07,898 - mylogger - INFO - 2015-01-16: No cover!
+2017-04-03 14:26:07,911 - mylogger - INFO - 2015-01-20: hold
+2017-04-03 14:26:07,924 - mylogger - INFO - 2015-01-21: hold
+2017-04-03 14:26:07,935 - mylogger - INFO - 2015-01-22: No cover!
+2017-04-03 14:26:07,950 - mylogger - INFO - 2015-01-23: No cover!
+2017-04-03 14:26:07,966 - mylogger - INFO - 2015-01-26: No cover!
+2017-04-03 14:26:07,976 - mylogger - INFO - 2015-01-27: hold
+2017-04-03 14:26:07,986 - mylogger - INFO - 2015-01-28: No cover!
+2017-04-03 14:26:07,998 - mylogger - INFO - 2015-01-29: hold
+2017-04-03 14:26:08,016 - mylogger - INFO - 2015-01-30: hold
+2017-04-03 14:26:08,026 - mylogger - INFO - 2015-02-02: hold
+2017-04-03 14:26:08,038 - mylogger - INFO - 2015-02-03: hold
+2017-04-03 14:26:08,050 - mylogger - INFO - 2015-02-04: No cover!
+2017-04-03 14:26:08,067 - mylogger - INFO - 2015-02-05: No cover!
+2017-04-03 14:26:08,078 - mylogger - INFO - 2015-02-06: hold
+2017-04-03 14:26:08,087 - mylogger - INFO - 2015-02-09: hold
+2017-04-03 14:26:08,101 - mylogger - INFO - 2015-02-10: No cover!
+2017-04-03 14:26:08,118 - mylogger - INFO - 2015-02-11: No cover!
+2017-04-03 14:26:08,128 - mylogger - INFO - 2015-02-12: No cover!
+2017-04-03 14:26:08,139 - mylogger - INFO - 2015-02-13: hold
+2017-04-03 14:26:08,154 - mylogger - INFO - 2015-02-17: No cover!
+2017-04-03 14:26:08,170 - mylogger - INFO - 2015-02-18: hold
+2017-04-03 14:26:08,179 - mylogger - INFO - 2015-02-19: No cover!
+2017-04-03 14:26:08,190 - mylogger - INFO - 2015-02-20: No cover!
+2017-04-03 14:26:08,205 - mylogger - INFO - 2015-02-23: hold
+2017-04-03 14:26:08,221 - mylogger - INFO - 2015-02-24: hold
+2017-04-03 14:26:08,230 - mylogger - INFO - 2015-02-25: No cover!
+2017-04-03 14:26:08,242 - mylogger - INFO - 2015-02-26: No cover!
+2017-04-03 14:26:08,258 - mylogger - INFO - 2015-02-27: hold
+2017-04-03 14:26:08,273 - mylogger - INFO - 2015-03-02: No cover!
+2017-04-03 14:26:08,283 - mylogger - INFO - 2015-03-03: No cover!
+2017-04-03 14:26:08,294 - mylogger - INFO - 2015-03-04: No cover!
+2017-04-03 14:26:08,308 - mylogger - INFO - 2015-03-05: hold
+2017-04-03 14:26:08,322 - mylogger - INFO - 2015-03-06: No cover!
+2017-04-03 14:26:08,332 - mylogger - INFO - 2015-03-09: No cover!
+2017-04-03 14:26:08,342 - mylogger - INFO - 2015-03-10: No cover!
+2017-04-03 14:26:08,361 - mylogger - INFO - 2015-03-11: No cover!
+2017-04-03 14:26:08,374 - mylogger - INFO - 2015-03-12: No cover!
+2017-04-03 14:26:08,383 - mylogger - INFO - 2015-03-13: hold
+2017-04-03 14:26:08,397 - mylogger - INFO - 2015-03-16: No cover!
+2017-04-03 14:26:08,410 - mylogger - INFO - 2015-03-17: No cover!
+2017-04-03 14:26:08,423 - mylogger - INFO - 2015-03-18: hold
+2017-04-03 14:26:08,434 - mylogger - INFO - 2015-03-19: No cover!
+2017-04-03 14:26:08,450 - mylogger - INFO - 2015-03-20: No cover!
+2017-04-03 14:26:08,466 - mylogger - INFO - 2015-03-23: No cover!
+2017-04-03 14:26:08,478 - mylogger - INFO - 2015-03-24: hold
+2017-04-03 14:26:08,489 - mylogger - INFO - 2015-03-25: No cover!
+2017-04-03 14:26:08,506 - mylogger - INFO - 2015-03-26: No cover!
+2017-04-03 14:26:08,521 - mylogger - INFO - 2015-03-27: hold
+2017-04-03 14:26:08,530 - mylogger - INFO - 2015-03-30: No cover!
+2017-04-03 14:26:08,542 - mylogger - INFO - 2015-03-31: No cover!
+2017-04-03 14:26:08,560 - mylogger - INFO - 2015-04-01: No cover!
+2017-04-03 14:26:08,574 - mylogger - INFO - 2015-04-02: No cover!
+2017-04-03 14:26:08,584 - mylogger - INFO - 2015-04-06: No cover!
+2017-04-03 14:26:08,598 - mylogger - INFO - 2015-04-07: No cover!
+2017-04-03 14:26:08,618 - mylogger - INFO - 2015-04-08: No cover!
+2017-04-03 14:26:08,628 - mylogger - INFO - 2015-04-09: hold
+2017-04-03 14:26:08,638 - mylogger - INFO - 2015-04-10: No cover!
+2017-04-03 14:26:08,654 - mylogger - INFO - 2015-04-13: No cover!
+2017-04-03 14:26:08,671 - mylogger - INFO - 2015-04-14: No cover!
+2017-04-03 14:26:08,680 - mylogger - INFO - 2015-04-15: hold
+2017-04-03 14:26:08,691 - mylogger - INFO - 2015-04-16: hold
+2017-04-03 14:26:08,708 - mylogger - INFO - 2015-04-17: No cover!
+2017-04-03 14:26:08,722 - mylogger - INFO - 2015-04-20: No cover!
+2017-04-03 14:26:08,731 - mylogger - INFO - 2015-04-21: hold
+2017-04-03 14:26:08,741 - mylogger - INFO - 2015-04-22: No cover!
+2017-04-03 14:26:08,759 - mylogger - INFO - 2015-04-23: No cover!
+2017-04-03 14:26:08,773 - mylogger - INFO - 2015-04-24: No cover!
+2017-04-03 14:26:08,783 - mylogger - INFO - 2015-04-27: No cover!
+2017-04-03 14:26:08,792 - mylogger - INFO - 2015-04-28: hold
+2017-04-03 14:26:08,811 - mylogger - INFO - 2015-04-29: No cover!
+2017-04-03 14:26:08,823 - mylogger - INFO - 2015-04-30: hold
+2017-04-03 14:26:08,833 - mylogger - INFO - 2015-05-01: No cover!
+2017-04-03 14:26:08,843 - mylogger - INFO - 2015-05-04: hold
+2017-04-03 14:26:08,861 - mylogger - INFO - 2015-05-05: No cover!
+2017-04-03 14:26:08,875 - mylogger - INFO - 2015-05-06: No cover!
+2017-04-03 14:26:08,886 - mylogger - INFO - 2015-05-07: No cover!
+2017-04-03 14:26:08,900 - mylogger - INFO - 2015-05-08: No cover!
+2017-04-03 14:26:08,917 - mylogger - INFO - 2015-05-11: No cover!
+2017-04-03 14:26:08,928 - mylogger - INFO - 2015-05-12: No cover!
+2017-04-03 14:26:08,939 - mylogger - INFO - 2015-05-13: hold
+2017-04-03 14:26:08,956 - mylogger - INFO - 2015-05-14: No cover!
+2017-04-03 14:26:08,972 - mylogger - INFO - 2015-05-15: No cover!
+2017-04-03 14:26:08,982 - mylogger - INFO - 2015-05-18: No cover!
+2017-04-03 14:26:09,000 - mylogger - INFO - 2015-05-19: hold
+2017-04-03 14:26:09,017 - mylogger - INFO - 2015-05-20: No cover!
+2017-04-03 14:26:09,049 - mylogger - INFO - 2015-05-21: No cover!
+2017-04-03 14:26:09,068 - mylogger - INFO - 2015-05-22: No cover!
+2017-04-03 14:26:09,100 - mylogger - INFO - 2015-05-26: hold
+2017-04-03 14:26:09,116 - mylogger - INFO - 2015-05-27: No cover!
+2017-04-03 14:26:09,136 - mylogger - INFO - 2015-05-28: hold
+2017-04-03 14:26:09,160 - mylogger - INFO - 2015-05-29: No cover!
+2017-04-03 14:26:09,174 - mylogger - INFO - 2015-06-01: No cover!
+2017-04-03 14:26:09,198 - mylogger - INFO - 2015-06-02: hold
+2017-04-03 14:26:09,217 - mylogger - INFO - 2015-06-03: No cover!
+2017-04-03 14:26:09,232 - mylogger - INFO - 2015-06-04: No cover!
+2017-04-03 14:26:09,246 - mylogger - INFO - 2015-06-05: No cover!
+2017-04-03 14:26:09,263 - mylogger - INFO - 2015-06-08: hold
+2017-04-03 14:26:09,281 - mylogger - INFO - 2015-06-09: No cover!
+2017-04-03 14:26:09,294 - mylogger - INFO - 2015-06-10: No cover!
+2017-04-03 14:26:09,307 - mylogger - INFO - 2015-06-11: No cover!
+2017-04-03 14:26:09,327 - mylogger - INFO - 2015-06-12: No cover!
+2017-04-03 14:26:09,342 - mylogger - INFO - 2015-06-15: No cover!
+2017-04-03 14:26:09,352 - mylogger - INFO - 2015-06-16: hold
+2017-04-03 14:26:09,366 - mylogger - INFO - 2015-06-17: No cover!
+2017-04-03 14:26:09,385 - mylogger - INFO - 2015-06-18: No cover!
+2017-04-03 14:26:09,397 - mylogger - INFO - 2015-06-19: hold
+2017-04-03 14:26:09,409 - mylogger - INFO - 2015-06-22: No cover!
+2017-04-03 14:26:09,422 - mylogger - INFO - 2015-06-23: No cover!
+2017-04-03 14:26:09,445 - mylogger - INFO - 2015-06-24: No cover!
+2017-04-03 14:26:09,459 - mylogger - INFO - 2015-06-25: hold
+2017-04-03 14:26:09,469 - mylogger - INFO - 2015-06-26: No cover!
+2017-04-03 14:26:09,480 - mylogger - INFO - 2015-06-29: No cover!
+2017-04-03 14:26:09,497 - mylogger - INFO - 2015-06-30: No cover!
+2017-04-03 14:26:09,511 - mylogger - INFO - 2015-07-01: No cover!
+2017-04-03 14:26:09,523 - mylogger - INFO - 2015-07-02: No cover!
+2017-04-03 14:26:09,535 - mylogger - INFO - 2015-07-06: No cover!
+2017-04-03 14:26:09,559 - mylogger - INFO - 2015-07-07: No cover!
+2017-04-03 14:26:09,577 - mylogger - INFO - 2015-07-08: No cover!
+2017-04-03 14:26:09,592 - mylogger - INFO - 2015-07-09: No cover!
+2017-04-03 14:26:09,617 - mylogger - INFO - 2015-07-10: No cover!
+2017-04-03 14:26:09,640 - mylogger - INFO - 2015-07-13: No cover!
+2017-04-03 14:26:09,660 - mylogger - INFO - 2015-07-14: No cover!
+2017-04-03 14:26:09,682 - mylogger - INFO - 2015-07-15: No cover!
+2017-04-03 14:26:09,694 - mylogger - INFO - 2015-07-16: No cover!
+2017-04-03 14:26:09,704 - mylogger - INFO - 2015-07-17: No cover!
+2017-04-03 14:26:09,716 - mylogger - INFO - 2015-07-20: No cover!
+2017-04-03 14:26:09,735 - mylogger - INFO - 2015-07-21: No cover!
+2017-04-03 14:26:09,749 - mylogger - INFO - 2015-07-22: hold
+2017-04-03 14:26:09,771 - mylogger - INFO - 2015-07-23: hold
+2017-04-03 14:26:09,785 - mylogger - INFO - 2015-07-24: hold
+2017-04-03 14:26:09,801 - mylogger - INFO - 2015-07-27: hold
+2017-04-03 14:26:09,815 - mylogger - INFO - 2015-07-28: No cover!
+2017-04-03 14:26:09,832 - mylogger - INFO - 2015-07-29: No cover!
+2017-04-03 14:26:09,843 - mylogger - INFO - 2015-07-30: No cover!
+2017-04-03 14:26:09,855 - mylogger - INFO - 2015-07-31: No cover!
+2017-04-03 14:26:09,867 - mylogger - INFO - 2015-08-03: No cover!
+2017-04-03 14:26:09,880 - mylogger - INFO - 2015-08-04: hold
+2017-04-03 14:26:09,890 - mylogger - INFO - 2015-08-05: No cover!
+2017-04-03 14:26:09,902 - mylogger - INFO - 2015-08-06: No cover!
+2017-04-03 14:26:09,913 - mylogger - INFO - 2015-08-07: No cover!
+2017-04-03 14:26:09,928 - mylogger - INFO - 2015-08-10: No cover!
+2017-04-03 14:26:09,937 - mylogger - INFO - 2015-08-11: hold
+2017-04-03 14:26:09,946 - mylogger - INFO - 2015-08-12: No cover!
+2017-04-03 14:26:09,956 - mylogger - INFO - 2015-08-13: No cover!
+2017-04-03 14:26:09,966 - mylogger - INFO - 2015-08-14: No cover!
+2017-04-03 14:26:09,980 - mylogger - INFO - 2015-08-17: hold
+2017-04-03 14:26:09,989 - mylogger - INFO - 2015-08-18: No cover!
+2017-04-03 14:26:09,997 - mylogger - INFO - 2015-08-19: hold
+2017-04-03 14:26:10,007 - mylogger - INFO - 2015-08-20: hold
+2017-04-03 14:26:10,018 - mylogger - INFO - 2015-08-21: hold
+2017-04-03 14:26:10,031 - mylogger - INFO - 2015-08-24: No cover!
+2017-04-03 14:26:10,040 - mylogger - INFO - 2015-08-25: hold
+2017-04-03 14:26:10,049 - mylogger - INFO - 2015-08-26: No cover!
+2017-04-03 14:26:10,058 - mylogger - INFO - 2015-08-27: No cover!
+2017-04-03 14:26:10,069 - mylogger - INFO - 2015-08-28: No cover!
+2017-04-03 14:26:10,083 - mylogger - INFO - 2015-08-31: No cover!
+2017-04-03 14:26:10,091 - mylogger - INFO - 2015-09-01: hold
+2017-04-03 14:26:10,101 - mylogger - INFO - 2015-09-02: No cover!
+2017-04-03 14:26:10,110 - mylogger - INFO - 2015-09-03: No cover!
+2017-04-03 14:26:10,120 - mylogger - INFO - 2015-09-04: hold
+2017-04-03 14:26:10,132 - mylogger - INFO - 2015-09-08: hold
+2017-04-03 14:26:10,141 - mylogger - INFO - 2015-09-09: hold
+2017-04-03 14:26:10,151 - mylogger - INFO - 2015-09-10: No cover!
+2017-04-03 14:26:10,164 - mylogger - INFO - 2015-09-11: No cover!
+2017-04-03 14:26:10,177 - mylogger - INFO - 2015-09-14: No cover!
+2017-04-03 14:26:10,186 - mylogger - INFO - 2015-09-15: No cover!
+2017-04-03 14:26:10,195 - mylogger - INFO - 2015-09-16: No cover!
+2017-04-03 14:26:10,205 - mylogger - INFO - 2015-09-17: hold
+2017-04-03 14:26:10,216 - mylogger - INFO - 2015-09-18: hold
+2017-04-03 14:26:10,230 - mylogger - INFO - 2015-09-21: hold
+2017-04-03 14:26:10,239 - mylogger - INFO - 2015-09-22: No cover!
+2017-04-03 14:26:10,249 - mylogger - INFO - 2015-09-23: No cover!
+2017-04-03 14:26:10,258 - mylogger - INFO - 2015-09-24: No cover!
+2017-04-03 14:26:10,271 - mylogger - INFO - 2015-09-25: No cover!
+2017-04-03 14:26:10,284 - mylogger - INFO - 2015-09-28: hold
+2017-04-03 14:26:10,293 - mylogger - INFO - 2015-09-29: No cover!
+2017-04-03 14:26:10,303 - mylogger - INFO - 2015-09-30: No cover!
+2017-04-03 14:26:10,313 - mylogger - INFO - 2015-10-01: hold
+2017-04-03 14:26:10,326 - mylogger - INFO - 2015-10-02: No cover!
+2017-04-03 14:26:10,336 - mylogger - INFO - 2015-10-05: No cover!
+2017-04-03 14:26:10,346 - mylogger - INFO - 2015-10-06: hold
+2017-04-03 14:26:10,355 - mylogger - INFO - 2015-10-07: No cover!
+2017-04-03 14:26:10,367 - mylogger - INFO - 2015-10-08: No cover!
+2017-04-03 14:26:10,380 - mylogger - INFO - 2015-10-09: No cover!
+2017-04-03 14:26:10,389 - mylogger - INFO - 2015-10-12: No cover!
+2017-04-03 14:26:10,468 - mylogger - INFO - 2015-10-13: No cover!
+2017-04-03 14:26:10,478 - mylogger - INFO - 2015-10-14: No cover!
+2017-04-03 14:26:10,487 - mylogger - INFO - 2015-10-15: No cover!
+2017-04-03 14:26:10,495 - mylogger - INFO - 2015-10-16: hold
+2017-04-03 14:26:10,505 - mylogger - INFO - 2015-10-19: No cover!
+2017-04-03 14:26:10,519 - mylogger - INFO - 2015-10-20: No cover!
+2017-04-03 14:26:10,528 - mylogger - INFO - 2015-10-21: No cover!
+2017-04-03 14:26:10,538 - mylogger - INFO - 2015-10-22: No cover!
+2017-04-03 14:26:10,547 - mylogger - INFO - 2015-10-23: No cover!
+2017-04-03 14:26:10,557 - mylogger - INFO - 2015-10-26: hold
+2017-04-03 14:26:10,572 - mylogger - INFO - 2015-10-27: No cover!
+2017-04-03 14:26:10,582 - mylogger - INFO - 2015-10-28: No cover!
+2017-04-03 14:26:10,592 - mylogger - INFO - 2015-10-29: hold
+2017-04-03 14:26:10,602 - mylogger - INFO - 2015-10-30: No cover!
+2017-04-03 14:26:10,612 - mylogger - INFO - 2015-11-02: No cover!
+2017-04-03 14:26:10,625 - mylogger - INFO - 2015-11-03: hold
+2017-04-03 14:26:10,633 - mylogger - INFO - 2015-11-04: hold
+2017-04-03 14:26:10,643 - mylogger - INFO - 2015-11-05: No cover!
+2017-04-03 14:26:10,655 - mylogger - INFO - 2015-11-06: No cover!
+2017-04-03 14:26:10,668 - mylogger - INFO - 2015-11-09: hold
+2017-04-03 14:26:10,677 - mylogger - INFO - 2015-11-10: hold
+2017-04-03 14:26:10,686 - mylogger - INFO - 2015-11-11: No cover!
+2017-04-03 14:26:10,700 - mylogger - INFO - 2015-11-12: hold
+2017-04-03 14:26:10,718 - mylogger - INFO - 2015-11-13: No cover!
+2017-04-03 14:26:10,727 - mylogger - INFO - 2015-11-16: No cover!
+2017-04-03 14:26:10,736 - mylogger - INFO - 2015-11-17: No cover!
+2017-04-03 14:26:10,745 - mylogger - INFO - 2015-11-18: No cover!
+2017-04-03 14:26:10,754 - mylogger - INFO - 2015-11-19: No cover!
+2017-04-03 14:26:10,768 - mylogger - INFO - 2015-11-20: No cover!
+2017-04-03 14:26:10,777 - mylogger - INFO - 2015-11-23: No cover!
+2017-04-03 14:26:10,786 - mylogger - INFO - 2015-11-24: No cover!
+2017-04-03 14:26:10,795 - mylogger - INFO - 2015-11-25: hold
+2017-04-03 14:26:10,807 - mylogger - INFO - 2015-11-27: No cover!
+2017-04-03 14:26:10,819 - mylogger - INFO - 2015-11-30: hold
+2017-04-03 14:26:10,829 - mylogger - INFO - 2015-12-01: No cover!
+2017-04-03 14:26:10,837 - mylogger - INFO - 2015-12-02: hold
+2017-04-03 14:26:10,846 - mylogger - INFO - 2015-12-03: No cover!
+2017-04-03 14:26:10,857 - mylogger - INFO - 2015-12-04: No cover!
+2017-04-03 14:26:10,870 - mylogger - INFO - 2015-12-07: hold
+2017-04-03 14:26:10,879 - mylogger - INFO - 2015-12-08: No cover!
+2017-04-03 14:26:10,889 - mylogger - INFO - 2015-12-09: hold
+2017-04-03 14:26:10,897 - mylogger - INFO - 2015-12-10: No cover!
+2017-04-03 14:26:10,907 - mylogger - INFO - 2015-12-11: hold
+2017-04-03 14:26:10,921 - mylogger - INFO - 2015-12-14: No cover!
+2017-04-03 14:26:10,929 - mylogger - INFO - 2015-12-15: hold
+2017-04-03 14:26:10,939 - mylogger - INFO - 2015-12-16: No cover!
+2017-04-03 14:26:10,948 - mylogger - INFO - 2015-12-17: hold
+2017-04-03 14:26:10,959 - mylogger - INFO - 2015-12-18: No cover!
+2017-04-03 14:26:10,972 - mylogger - INFO - 2015-12-21: No cover!
+2017-04-03 14:26:10,982 - mylogger - INFO - 2015-12-22: No cover!
+2017-04-03 14:26:10,991 - mylogger - INFO - 2015-12-23: No cover!
+2017-04-03 14:26:11,000 - mylogger - INFO - 2015-12-24: No cover!
+2017-04-03 14:26:11,017 - mylogger - INFO - 2015-12-28: No cover!
+2017-04-03 14:26:11,027 - mylogger - INFO - 2015-12-29: No cover!
+2017-04-03 14:26:11,036 - mylogger - INFO - 2015-12-30: No cover!
+2017-04-03 14:26:11,047 - mylogger - INFO - 2015-12-31: No cover!
+2017-04-03 14:26:11,795 - mylogger - INFO - Total profit and loss: 0.442917031
+2017-04-03 14:26:11,821 - mylogger - INFO - Hit table:
+2017-04-03 14:26:11,821 - mylogger - INFO - Date          signal  hit/miss
+2017-04-03 14:26:11,822 - mylogger - INFO - 2014-01-31    buy    hit
+2017-04-03 14:26:11,822 - mylogger - INFO - 2014-02-03    buy    hit
+2017-04-03 14:26:11,822 - mylogger - INFO - 2014-02-04    buy    hit
+2017-04-03 14:26:11,822 - mylogger - INFO - 2014-02-05    hold    miss
+2017-04-03 14:26:11,822 - mylogger - INFO - 2014-02-06    buy    hit
+2017-04-03 14:26:11,822 - mylogger - INFO - 2014-02-07    buy    hit
+2017-04-03 14:26:11,822 - mylogger - INFO - 2014-02-10    buy    hit
+2017-04-03 14:26:11,823 - mylogger - INFO - 2014-02-11    buy    miss
+2017-04-03 14:26:11,823 - mylogger - INFO - 2014-02-12    buy    hit
+2017-04-03 14:26:11,823 - mylogger - INFO - 2014-02-13    buy    miss
+2017-04-03 14:26:11,823 - mylogger - INFO - 2014-02-14    hold    miss
+2017-04-03 14:26:11,823 - mylogger - INFO - 2014-02-18    buy    miss
+2017-04-03 14:26:11,823 - mylogger - INFO - 2014-02-19    hold    miss
+2017-04-03 14:26:11,823 - mylogger - INFO - 2014-02-20    buy    miss
+2017-04-03 14:26:11,824 - mylogger - INFO - 2014-02-21    hold    miss
+2017-04-03 14:26:11,824 - mylogger - INFO - 2014-02-24    buy    miss
+2017-04-03 14:26:11,824 - mylogger - INFO - 2014-02-25    hold    miss
+2017-04-03 14:26:11,824 - mylogger - INFO - 2014-02-26    buy    hit
+2017-04-03 14:26:11,824 - mylogger - INFO - 2014-02-27    buy    miss
+2017-04-03 14:26:11,824 - mylogger - INFO - 2014-02-28    buy    hit
+2017-04-03 14:26:11,825 - mylogger - INFO - 2014-03-03    buy    hit
+2017-04-03 14:26:11,825 - mylogger - INFO - 2014-03-04    buy    hit
+2017-04-03 14:26:11,825 - mylogger - INFO - 2014-03-05    buy    miss
+2017-04-03 14:26:11,825 - mylogger - INFO - 2014-03-06    buy    miss
+2017-04-03 14:26:11,825 - mylogger - INFO - 2014-03-07    buy    hit
+2017-04-03 14:26:11,825 - mylogger - INFO - 2014-03-10    buy    hit
+2017-04-03 14:26:11,825 - mylogger - INFO - 2014-03-11    buy    hit
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-12    buy    miss
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-13    buy    miss
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-14    hold    miss
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-17    buy    hit
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-18    buy    miss
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-19    buy    miss
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-20    buy    hit
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-21    buy    hit
+2017-04-03 14:26:11,826 - mylogger - INFO - 2014-03-24    buy    hit
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-03-25    buy    miss
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-03-26    buy    miss
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-03-27    buy    miss
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-03-28    buy    miss
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-03-31    buy    hit
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-04-01    buy    hit
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-04-02    buy    miss
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-04-03    hold    miss
+2017-04-03 14:26:11,827 - mylogger - INFO - 2014-04-04    buy    miss
+2017-04-03 14:26:11,828 - mylogger - INFO - 2014-04-07    buy    miss
+2017-04-03 14:26:11,828 - mylogger - INFO - 2014-04-08    buy    hit
+2017-04-03 14:26:11,828 - mylogger - INFO - 2014-04-09    buy    miss
+2017-04-03 14:26:11,828 - mylogger - INFO - 2014-04-10    buy    miss
+2017-04-03 14:26:11,828 - mylogger - INFO - 2014-04-11    buy    hit
+2017-04-03 14:26:11,828 - mylogger - INFO - 2014-04-14    buy    miss
+2017-04-03 14:26:11,828 - mylogger - INFO - 2014-04-15    buy    hit
+2017-04-03 14:26:11,828 - mylogger - INFO - 2014-04-16    buy    hit
+2017-04-03 14:26:11,829 - mylogger - INFO - 2014-04-17    buy    hit
+2017-04-03 14:26:11,829 - mylogger - INFO - 2014-04-21    buy    hit
+2017-04-03 14:26:11,829 - mylogger - INFO - 2014-04-22    buy    miss
+2017-04-03 14:26:11,829 - mylogger - INFO - 2014-04-23    buy    hit
+2017-04-03 14:26:11,829 - mylogger - INFO - 2014-04-24    buy    hit
+2017-04-03 14:26:11,829 - mylogger - INFO - 2014-04-25    hold    miss
+2017-04-03 14:26:11,829 - mylogger - INFO - 2014-04-28    buy    miss
+2017-04-03 14:26:11,830 - mylogger - INFO - 2014-04-29    hold    miss
+2017-04-03 14:26:11,830 - mylogger - INFO - 2014-04-30    hold    miss
+2017-04-03 14:26:11,830 - mylogger - INFO - 2014-05-01    hold    miss
+2017-04-03 14:26:11,830 - mylogger - INFO - 2014-05-02    buy    hit
+2017-04-03 14:26:11,830 - mylogger - INFO - 2014-05-05    hold    miss
+2017-04-03 14:26:11,830 - mylogger - INFO - 2014-05-06    hold    miss
+2017-04-03 14:26:11,830 - mylogger - INFO - 2014-05-07    hold    miss
+2017-04-03 14:26:11,830 - mylogger - INFO - 2014-05-08    buy    miss
+2017-04-03 14:26:11,831 - mylogger - INFO - 2014-05-09    hold    miss
+2017-04-03 14:26:11,831 - mylogger - INFO - 2014-05-12    buy    hit
+2017-04-03 14:26:11,831 - mylogger - INFO - 2014-05-13    buy    hit
+2017-04-03 14:26:11,831 - mylogger - INFO - 2014-05-14    hold    miss
+2017-04-03 14:26:11,831 - mylogger - INFO - 2014-05-15    buy    hit
+2017-04-03 14:26:11,831 - mylogger - INFO - 2014-05-16    hold    miss
+2017-04-03 14:26:11,832 - mylogger - INFO - 2014-05-19    buy    hit
+2017-04-03 14:26:11,832 - mylogger - INFO - 2014-05-20    buy    hit
+2017-04-03 14:26:11,832 - mylogger - INFO - 2014-05-21    buy    hit
+2017-04-03 14:26:11,832 - mylogger - INFO - 2014-05-22    buy    hit
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-05-23    buy    hit
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-05-27    buy    miss
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-05-28    hold    miss
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-05-29    buy    miss
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-05-30    hold    miss
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-06-02    buy    hit
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-06-03    buy    hit
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-06-04    hold    miss
+2017-04-03 14:26:11,833 - mylogger - INFO - 2014-06-05    buy    miss
+2017-04-03 14:26:11,834 - mylogger - INFO - 2014-06-06    buy    hit
+2017-04-03 14:26:11,834 - mylogger - INFO - 2014-06-09    buy    hit
+2017-04-03 14:26:11,834 - mylogger - INFO - 2014-06-10    hold    miss
+2017-04-03 14:26:11,834 - mylogger - INFO - 2014-06-11    buy    miss
+2017-04-03 14:26:11,834 - mylogger - INFO - 2014-06-12    buy    miss
+2017-04-03 14:26:11,834 - mylogger - INFO - 2014-06-13    buy    hit
+2017-04-03 14:26:11,835 - mylogger - INFO - 2014-06-16    buy    miss
+2017-04-03 14:26:11,835 - mylogger - INFO - 2014-06-17    buy    hit
+2017-04-03 14:26:11,835 - mylogger - INFO - 2014-06-18    buy    miss
+2017-04-03 14:26:11,835 - mylogger - INFO - 2014-06-19    buy    miss
+2017-04-03 14:26:11,835 - mylogger - INFO - 2014-06-20    buy    miss
+2017-04-03 14:26:11,835 - mylogger - INFO - 2014-06-23    buy    miss
+2017-04-03 14:26:11,835 - mylogger - INFO - 2014-06-24    buy    hit
+2017-04-03 14:26:11,835 - mylogger - INFO - 2014-06-25    buy    hit
+2017-04-03 14:26:11,836 - mylogger - INFO - 2014-06-26    buy    hit
+2017-04-03 14:26:11,836 - mylogger - INFO - 2014-06-27    buy    hit
+2017-04-03 14:26:11,836 - mylogger - INFO - 2014-06-30    buy    hit
+2017-04-03 14:26:11,836 - mylogger - INFO - 2014-07-01    buy    miss
+2017-04-03 14:26:11,836 - mylogger - INFO - 2014-07-02    buy    hit
+2017-04-03 14:26:11,836 - mylogger - INFO - 2014-07-03    buy    hit
+2017-04-03 14:26:11,836 - mylogger - INFO - 2014-07-07    buy    miss
+2017-04-03 14:26:11,837 - mylogger - INFO - 2014-07-08    buy    hit
+2017-04-03 14:26:11,837 - mylogger - INFO - 2014-07-09    buy    miss
+2017-04-03 14:26:11,837 - mylogger - INFO - 2014-07-10    hold    miss
+2017-04-03 14:26:11,837 - mylogger - INFO - 2014-07-11    buy    hit
+2017-04-03 14:26:11,837 - mylogger - INFO - 2014-07-14    buy    miss
+2017-04-03 14:26:11,837 - mylogger - INFO - 2014-07-15    buy    miss
+2017-04-03 14:26:11,837 - mylogger - INFO - 2014-07-16    buy    miss
+2017-04-03 14:26:11,838 - mylogger - INFO - 2014-07-17    hold    miss
+2017-04-03 14:26:11,838 - mylogger - INFO - 2014-07-18    buy    miss
+2017-04-03 14:26:11,838 - mylogger - INFO - 2014-07-21    buy    hit
+2017-04-03 14:26:11,838 - mylogger - INFO - 2014-07-22    buy    hit
+2017-04-03 14:26:11,838 - mylogger - INFO - 2014-07-23    buy    miss
+2017-04-03 14:26:11,838 - mylogger - INFO - 2014-07-24    buy    hit
+2017-04-03 14:26:11,839 - mylogger - INFO - 2014-07-25    buy    hit
+2017-04-03 14:26:11,839 - mylogger - INFO - 2014-07-28    buy    miss
+2017-04-03 14:26:11,839 - mylogger - INFO - 2014-07-29    hold    miss
+2017-04-03 14:26:11,839 - mylogger - INFO - 2014-07-30    buy    miss
+2017-04-03 14:26:11,840 - mylogger - INFO - 2014-07-31    buy    hit
+2017-04-03 14:26:11,840 - mylogger - INFO - 2014-08-01    buy    miss
+2017-04-03 14:26:11,841 - mylogger - INFO - 2014-08-04    hold    miss
+2017-04-03 14:26:11,841 - mylogger - INFO - 2014-08-05    buy    miss
+2017-04-03 14:26:11,842 - mylogger - INFO - 2014-08-06    buy    miss
+2017-04-03 14:26:11,842 - mylogger - INFO - 2014-08-07    buy    hit
+2017-04-03 14:26:11,843 - mylogger - INFO - 2014-08-08    buy    hit
+2017-04-03 14:26:11,843 - mylogger - INFO - 2014-08-11    buy    miss
+2017-04-03 14:26:11,843 - mylogger - INFO - 2014-08-12    buy    hit
+2017-04-03 14:26:11,843 - mylogger - INFO - 2014-08-13    buy    hit
+2017-04-03 14:26:11,843 - mylogger - INFO - 2014-08-14    hold    miss
+2017-04-03 14:26:11,843 - mylogger - INFO - 2014-08-15    buy    hit
+2017-04-03 14:26:11,843 - mylogger - INFO - 2014-08-18    buy    hit
+2017-04-03 14:26:11,843 - mylogger - INFO - 2014-08-19    buy    hit
+2017-04-03 14:26:11,844 - mylogger - INFO - 2014-08-20    buy    hit
+2017-04-03 14:26:11,844 - mylogger - INFO - 2014-08-21    buy    hit
+2017-04-03 14:26:11,844 - mylogger - INFO - 2014-08-22    buy    hit
+2017-04-03 14:26:11,844 - mylogger - INFO - 2014-08-25    buy    miss
+2017-04-03 14:26:11,844 - mylogger - INFO - 2014-08-26    hold    miss
+2017-04-03 14:26:11,844 - mylogger - INFO - 2014-08-27    buy    hit
+2017-04-03 14:26:11,844 - mylogger - INFO - 2014-08-28    hold    miss
+2017-04-03 14:26:11,844 - mylogger - INFO - 2014-08-29    buy    hit
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-02    buy    miss
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-03    hold    miss
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-04    buy    hit
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-05    buy    miss
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-08    buy    miss
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-09    buy    hit
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-10    buy    hit
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-11    hold    miss
+2017-04-03 14:26:11,845 - mylogger - INFO - 2014-09-12    buy    miss
+2017-04-03 14:26:11,846 - mylogger - INFO - 2014-09-15    buy    miss
+2017-04-03 14:26:11,846 - mylogger - INFO - 2014-09-16    buy    hit
+2017-04-03 14:26:11,846 - mylogger - INFO - 2014-09-17    hold    miss
+2017-04-03 14:26:11,846 - mylogger - INFO - 2014-09-18    buy    miss
+2017-04-03 14:26:11,846 - mylogger - INFO - 2014-09-19    buy    hit
+2017-04-03 14:26:11,846 - mylogger - INFO - 2014-09-22    hold    miss
+2017-04-03 14:26:11,846 - mylogger - INFO - 2014-09-23    buy    miss
+2017-04-03 14:26:11,847 - mylogger - INFO - 2014-09-24    buy    miss
+2017-04-03 14:26:11,847 - mylogger - INFO - 2014-09-25    buy    hit
+2017-04-03 14:26:11,847 - mylogger - INFO - 2014-09-26    buy    miss
+2017-04-03 14:26:11,847 - mylogger - INFO - 2014-09-29    hold    miss
+2017-04-03 14:26:11,847 - mylogger - INFO - 2014-09-30    buy    miss
+2017-04-03 14:26:11,847 - mylogger - INFO - 2014-10-01    buy    hit
+2017-04-03 14:26:11,847 - mylogger - INFO - 2014-10-02    buy    miss
+2017-04-03 14:26:11,848 - mylogger - INFO - 2014-10-03    hold    hit
+2017-04-03 14:26:11,848 - mylogger - INFO - 2014-10-06    buy    miss
+2017-04-03 14:26:11,848 - mylogger - INFO - 2014-10-07    buy    hit
+2017-04-03 14:26:11,848 - mylogger - INFO - 2014-10-08    buy    hit
+2017-04-03 14:26:11,848 - mylogger - INFO - 2014-10-09    hold    miss
+2017-04-03 14:26:11,849 - mylogger - INFO - 2014-10-10    buy    miss
+2017-04-03 14:26:11,849 - mylogger - INFO - 2014-10-13    buy    miss
+2017-04-03 14:26:11,849 - mylogger - INFO - 2014-10-14    buy    miss
+2017-04-03 14:26:11,849 - mylogger - INFO - 2014-10-15    buy    miss
+2017-04-03 14:26:11,849 - mylogger - INFO - 2014-10-16    buy    hit
+2017-04-03 14:26:11,849 - mylogger - INFO - 2014-10-17    buy    hit
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-20    buy    hit
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-21    buy    hit
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-22    buy    hit
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-23    buy    hit
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-24    hold    miss
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-27    buy    hit
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-28    buy    hit
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-29    buy    miss
+2017-04-03 14:26:11,850 - mylogger - INFO - 2014-10-30    hold    miss
+2017-04-03 14:26:11,851 - mylogger - INFO - 2014-10-31    hold    miss
+2017-04-03 14:26:11,851 - mylogger - INFO - 2014-11-03    buy    miss
+2017-04-03 14:26:11,851 - mylogger - INFO - 2014-11-04    buy    hit
+2017-04-03 14:26:11,851 - mylogger - INFO - 2014-11-05    buy    hit
+2017-04-03 14:26:11,851 - mylogger - INFO - 2014-11-06    buy    hit
+2017-04-03 14:26:11,851 - mylogger - INFO - 2014-11-07    buy    miss
+2017-04-03 14:26:11,852 - mylogger - INFO - 2014-11-10    hold    miss
+2017-04-03 14:26:11,852 - mylogger - INFO - 2014-11-11    buy    hit
+2017-04-03 14:26:11,852 - mylogger - INFO - 2014-11-12    hold    miss
+2017-04-03 14:26:11,852 - mylogger - INFO - 2014-11-13    buy    hit
+2017-04-03 14:26:11,852 - mylogger - INFO - 2014-11-14    buy    miss
+2017-04-03 14:26:11,852 - mylogger - INFO - 2014-11-17    buy    hit
+2017-04-03 14:26:11,852 - mylogger - INFO - 2014-11-18    buy    miss
+2017-04-03 14:26:11,853 - mylogger - INFO - 2014-11-19    buy    hit
+2017-04-03 14:26:11,853 - mylogger - INFO - 2014-11-20    buy    hit
+2017-04-03 14:26:11,853 - mylogger - INFO - 2014-11-21    hold    miss
+2017-04-03 14:26:11,853 - mylogger - INFO - 2014-11-24    buy    miss
+2017-04-03 14:26:11,853 - mylogger - INFO - 2014-11-25    hold    miss
+2017-04-03 14:26:11,853 - mylogger - INFO - 2014-11-26    buy    miss
+2017-04-03 14:26:11,853 - mylogger - INFO - 2014-11-28    hold    miss
+2017-04-03 14:26:11,854 - mylogger - INFO - 2014-12-01    hold    miss
+2017-04-03 14:26:11,854 - mylogger - INFO - 2014-12-02    buy    hit
+2017-04-03 14:26:11,854 - mylogger - INFO - 2014-12-03    buy    miss
+2017-04-03 14:26:11,854 - mylogger - INFO - 2014-12-04    hold    miss
+2017-04-03 14:26:11,854 - mylogger - INFO - 2014-12-05    buy    miss
+2017-04-03 14:26:11,854 - mylogger - INFO - 2014-12-08    buy    hit
+2017-04-03 14:26:11,854 - mylogger - INFO - 2014-12-09    buy    miss
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-10    buy    miss
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-11    buy    miss
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-12    buy    miss
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-15    hold    miss
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-16    buy    hit
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-17    buy    hit
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-18    buy    miss
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-19    buy    hit
+2017-04-03 14:26:11,855 - mylogger - INFO - 2014-12-22    buy    miss
+2017-04-03 14:26:11,856 - mylogger - INFO - 2014-12-23    buy    miss
+2017-04-03 14:26:11,856 - mylogger - INFO - 2014-12-24    buy    hit
+2017-04-03 14:26:11,856 - mylogger - INFO - 2014-12-26    buy    miss
+2017-04-03 14:26:11,856 - mylogger - INFO - 2014-12-29    buy    miss
+2017-04-03 14:26:11,856 - mylogger - INFO - 2014-12-30    hold    miss
+2017-04-03 14:26:11,856 - mylogger - INFO - 2014-12-31    buy    miss
+2017-04-03 14:26:11,856 - mylogger - INFO - 2015-01-02    hold    miss
+2017-04-03 14:26:11,856 - mylogger - INFO - 2015-01-05    hold    miss
+2017-04-03 14:26:11,857 - mylogger - INFO - 2015-01-06    buy    hit
+2017-04-03 14:26:11,857 - mylogger - INFO - 2015-01-07    buy    hit
+2017-04-03 14:26:11,857 - mylogger - INFO - 2015-01-08    buy    hit
+2017-04-03 14:26:11,857 - mylogger - INFO - 2015-01-09    buy    miss
+2017-04-03 14:26:11,857 - mylogger - INFO - 2015-01-12    buy    hit
+2017-04-03 14:26:11,857 - mylogger - INFO - 2015-01-13    hold    miss
+2017-04-03 14:26:11,857 - mylogger - INFO - 2015-01-14    buy    miss
+2017-04-03 14:26:11,857 - mylogger - INFO - 2015-01-15    buy    miss
+2017-04-03 14:26:11,858 - mylogger - INFO - 2015-01-16    buy    hit
+2017-04-03 14:26:11,858 - mylogger - INFO - 2015-01-20    hold    miss
+2017-04-03 14:26:11,858 - mylogger - INFO - 2015-01-21    hold    miss
+2017-04-03 14:26:11,858 - mylogger - INFO - 2015-01-22    buy    hit
+2017-04-03 14:26:11,858 - mylogger - INFO - 2015-01-23    buy    hit
+2017-04-03 14:26:11,858 - mylogger - INFO - 2015-01-26    buy    miss
+2017-04-03 14:26:11,859 - mylogger - INFO - 2015-01-27    hold    miss
+2017-04-03 14:26:11,859 - mylogger - INFO - 2015-01-28    buy    hit
+2017-04-03 14:26:11,859 - mylogger - INFO - 2015-01-29    hold    miss
+2017-04-03 14:26:11,859 - mylogger - INFO - 2015-01-30    hold    miss
+2017-04-03 14:26:11,859 - mylogger - INFO - 2015-02-02    hold    miss
+2017-04-03 14:26:11,859 - mylogger - INFO - 2015-02-03    hold    miss
+2017-04-03 14:26:11,860 - mylogger - INFO - 2015-02-04    buy    hit
+2017-04-03 14:26:11,860 - mylogger - INFO - 2015-02-05    buy    miss
+2017-04-03 14:26:11,860 - mylogger - INFO - 2015-02-06    hold    miss
+2017-04-03 14:26:11,860 - mylogger - INFO - 2015-02-09    hold    miss
+2017-04-03 14:26:11,860 - mylogger - INFO - 2015-02-10    buy    hit
+2017-04-03 14:26:11,860 - mylogger - INFO - 2015-02-11    buy    hit
+2017-04-03 14:26:11,861 - mylogger - INFO - 2015-02-12    buy    hit
+2017-04-03 14:26:11,861 - mylogger - INFO - 2015-02-13    hold    miss
+2017-04-03 14:26:11,861 - mylogger - INFO - 2015-02-17    buy    hit
+2017-04-03 14:26:11,861 - mylogger - INFO - 2015-02-18    hold    miss
+2017-04-03 14:26:11,861 - mylogger - INFO - 2015-02-19    buy    hit
+2017-04-03 14:26:11,861 - mylogger - INFO - 2015-02-20    buy    hit
+2017-04-03 14:26:11,862 - mylogger - INFO - 2015-02-23    hold    miss
+2017-04-03 14:26:11,862 - mylogger - INFO - 2015-02-24    hold    miss
+2017-04-03 14:26:11,862 - mylogger - INFO - 2015-02-25    buy    hit
+2017-04-03 14:26:11,862 - mylogger - INFO - 2015-02-26    buy    miss
+2017-04-03 14:26:11,862 - mylogger - INFO - 2015-02-27    hold    miss
+2017-04-03 14:26:11,862 - mylogger - INFO - 2015-03-02    buy    hit
+2017-04-03 14:26:11,862 - mylogger - INFO - 2015-03-03    buy    miss
+2017-04-03 14:26:11,863 - mylogger - INFO - 2015-03-04    buy    miss
+2017-04-03 14:26:11,863 - mylogger - INFO - 2015-03-05    hold    miss
+2017-04-03 14:26:11,863 - mylogger - INFO - 2015-03-06    buy    hit
+2017-04-03 14:26:11,863 - mylogger - INFO - 2015-03-09    buy    miss
+2017-04-03 14:26:11,863 - mylogger - INFO - 2015-03-10    buy    miss
+2017-04-03 14:26:11,863 - mylogger - INFO - 2015-03-11    buy    hit
+2017-04-03 14:26:11,863 - mylogger - INFO - 2015-03-12    buy    miss
+2017-04-03 14:26:11,864 - mylogger - INFO - 2015-03-13    hold    miss
+2017-04-03 14:26:11,864 - mylogger - INFO - 2015-03-16    buy    hit
+2017-04-03 14:26:11,864 - mylogger - INFO - 2015-03-17    buy    hit
+2017-04-03 14:26:11,864 - mylogger - INFO - 2015-03-18    hold    miss
+2017-04-03 14:26:11,864 - mylogger - INFO - 2015-03-19    buy    miss
+2017-04-03 14:26:11,864 - mylogger - INFO - 2015-03-20    buy    hit
+2017-04-03 14:26:11,864 - mylogger - INFO - 2015-03-23    buy    miss
+2017-04-03 14:26:11,865 - mylogger - INFO - 2015-03-24    hold    miss
+2017-04-03 14:26:11,865 - mylogger - INFO - 2015-03-25    buy    hit
+2017-04-03 14:26:11,865 - mylogger - INFO - 2015-03-26    buy    miss
+2017-04-03 14:26:11,865 - mylogger - INFO - 2015-03-27    hold    miss
+2017-04-03 14:26:11,865 - mylogger - INFO - 2015-03-30    buy    miss
+2017-04-03 14:26:11,865 - mylogger - INFO - 2015-03-31    buy    miss
+2017-04-03 14:26:11,866 - mylogger - INFO - 2015-04-01    buy    hit
+2017-04-03 14:26:11,866 - mylogger - INFO - 2015-04-02    buy    hit
+2017-04-03 14:26:11,866 - mylogger - INFO - 2015-04-06    buy    miss
+2017-04-03 14:26:11,866 - mylogger - INFO - 2015-04-07    buy    miss
+2017-04-03 14:26:11,866 - mylogger - INFO - 2015-04-08    buy    hit
+2017-04-03 14:26:11,866 - mylogger - INFO - 2015-04-09    hold    miss
+2017-04-03 14:26:11,866 - mylogger - INFO - 2015-04-10    buy    miss
+2017-04-03 14:26:11,867 - mylogger - INFO - 2015-04-13    buy    miss
+2017-04-03 14:26:11,867 - mylogger - INFO - 2015-04-14    buy    hit
+2017-04-03 14:26:11,867 - mylogger - INFO - 2015-04-15    hold    miss
+2017-04-03 14:26:11,867 - mylogger - INFO - 2015-04-16    hold    miss
+2017-04-03 14:26:11,867 - mylogger - INFO - 2015-04-17    buy    hit
+2017-04-03 14:26:11,867 - mylogger - INFO - 2015-04-20    buy    miss
+2017-04-03 14:26:11,868 - mylogger - INFO - 2015-04-21    hold    miss
+2017-04-03 14:26:11,868 - mylogger - INFO - 2015-04-22    buy    hit
+2017-04-03 14:26:11,868 - mylogger - INFO - 2015-04-23    buy    hit
+2017-04-03 14:26:11,868 - mylogger - INFO - 2015-04-24    buy    hit
+2017-04-03 14:26:11,868 - mylogger - INFO - 2015-04-27    buy    miss
+2017-04-03 14:26:11,868 - mylogger - INFO - 2015-04-28    hold    miss
+2017-04-03 14:26:11,868 - mylogger - INFO - 2015-04-29    buy    miss
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-04-30    hold    miss
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-05-01    buy    miss
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-05-04    hold    miss
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-05-05    buy    miss
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-05-06    buy    hit
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-05-07    buy    hit
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-05-08    buy    miss
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-05-11    buy    miss
+2017-04-03 14:26:11,869 - mylogger - INFO - 2015-05-12    buy    hit
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-13    hold    miss
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-14    buy    miss
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-15    buy    hit
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-18    buy    miss
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-19    hold    miss
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-20    buy    hit
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-21    buy    hit
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-22    buy    miss
+2017-04-03 14:26:11,870 - mylogger - INFO - 2015-05-26    hold    miss
+2017-04-03 14:26:11,871 - mylogger - INFO - 2015-05-27    buy    miss
+2017-04-03 14:26:11,871 - mylogger - INFO - 2015-05-28    hold    miss
+2017-04-03 14:26:11,871 - mylogger - INFO - 2015-05-29    buy    hit
+2017-04-03 14:26:11,871 - mylogger - INFO - 2015-06-01    buy    miss
+2017-04-03 14:26:11,871 - mylogger - INFO - 2015-06-02    hold    miss
+2017-04-03 14:26:11,871 - mylogger - INFO - 2015-06-03    buy    miss
+2017-04-03 14:26:11,871 - mylogger - INFO - 2015-06-04    buy    miss
+2017-04-03 14:26:11,872 - mylogger - INFO - 2015-06-05    buy    miss
+2017-04-03 14:26:11,872 - mylogger - INFO - 2015-06-08    hold    miss
+2017-04-03 14:26:11,872 - mylogger - INFO - 2015-06-09    buy    hit
+2017-04-03 14:26:11,872 - mylogger - INFO - 2015-06-10    buy    miss
+2017-04-03 14:26:11,872 - mylogger - INFO - 2015-06-11    buy    miss
+2017-04-03 14:26:11,872 - mylogger - INFO - 2015-06-12    buy    miss
+2017-04-03 14:26:11,872 - mylogger - INFO - 2015-06-15    buy    hit
+2017-04-03 14:26:11,873 - mylogger - INFO - 2015-06-16    hold    miss
+2017-04-03 14:26:11,873 - mylogger - INFO - 2015-06-17    buy    hit
+2017-04-03 14:26:11,873 - mylogger - INFO - 2015-06-18    buy    miss
+2017-04-03 14:26:11,873 - mylogger - INFO - 2015-06-19    hold    miss
+2017-04-03 14:26:11,873 - mylogger - INFO - 2015-06-22    buy    miss
+2017-04-03 14:26:11,873 - mylogger - INFO - 2015-06-23    buy    hit
+2017-04-03 14:26:11,873 - mylogger - INFO - 2015-06-24    buy    miss
+2017-04-03 14:26:11,874 - mylogger - INFO - 2015-06-25    hold    miss
+2017-04-03 14:26:11,874 - mylogger - INFO - 2015-06-26    buy    miss
+2017-04-03 14:26:11,874 - mylogger - INFO - 2015-06-29    buy    hit
+2017-04-03 14:26:11,874 - mylogger - INFO - 2015-06-30    buy    hit
+2017-04-03 14:26:11,874 - mylogger - INFO - 2015-07-01    buy    miss
+2017-04-03 14:26:11,874 - mylogger - INFO - 2015-07-02    buy    miss
+2017-04-03 14:26:11,875 - mylogger - INFO - 2015-07-06    buy    miss
+2017-04-03 14:26:11,875 - mylogger - INFO - 2015-07-07    buy    miss
+2017-04-03 14:26:11,875 - mylogger - INFO - 2015-07-08    buy    miss
+2017-04-03 14:26:11,875 - mylogger - INFO - 2015-07-09    buy    hit
+2017-04-03 14:26:11,875 - mylogger - INFO - 2015-07-10    buy    hit
+2017-04-03 14:26:11,875 - mylogger - INFO - 2015-07-13    buy    miss
+2017-04-03 14:26:11,876 - mylogger - INFO - 2015-07-14    buy    hit
+2017-04-03 14:26:11,876 - mylogger - INFO - 2015-07-15    buy    hit
+2017-04-03 14:26:11,876 - mylogger - INFO - 2015-07-16    buy    hit
+2017-04-03 14:26:11,876 - mylogger - INFO - 2015-07-17    buy    hit
+2017-04-03 14:26:11,876 - mylogger - INFO - 2015-07-20    buy    miss
+2017-04-03 14:26:11,876 - mylogger - INFO - 2015-07-21    buy    miss
+2017-04-03 14:26:11,876 - mylogger - INFO - 2015-07-22    hold    miss
+2017-04-03 14:26:11,877 - mylogger - INFO - 2015-07-23    hold    miss
+2017-04-03 14:26:11,877 - mylogger - INFO - 2015-07-24    hold    miss
+2017-04-03 14:26:11,877 - mylogger - INFO - 2015-07-27    hold    miss
+2017-04-03 14:26:11,877 - mylogger - INFO - 2015-07-28    buy    miss
+2017-04-03 14:26:11,877 - mylogger - INFO - 2015-07-29    buy    miss
+2017-04-03 14:26:11,877 - mylogger - INFO - 2015-07-30    buy    miss
+2017-04-03 14:26:11,878 - mylogger - INFO - 2015-07-31    buy    miss
+2017-04-03 14:26:11,878 - mylogger - INFO - 2015-08-03    buy    miss
+2017-04-03 14:26:11,878 - mylogger - INFO - 2015-08-04    hold    miss
+2017-04-03 14:26:11,878 - mylogger - INFO - 2015-08-05    buy    hit
+2017-04-03 14:26:11,879 - mylogger - INFO - 2015-08-06    buy    hit
+2017-04-03 14:26:11,879 - mylogger - INFO - 2015-08-07    buy    hit
+2017-04-03 14:26:11,879 - mylogger - INFO - 2015-08-10    buy    miss
+2017-04-03 14:26:11,879 - mylogger - INFO - 2015-08-11    hold    miss
+2017-04-03 14:26:11,880 - mylogger - INFO - 2015-08-12    buy    miss
+2017-04-03 14:26:11,880 - mylogger - INFO - 2015-08-13    buy    hit
+2017-04-03 14:26:11,880 - mylogger - INFO - 2015-08-14    buy    hit
+2017-04-03 14:26:11,880 - mylogger - INFO - 2015-08-17    hold    miss
+2017-04-03 14:26:11,881 - mylogger - INFO - 2015-08-18    buy    miss
+2017-04-03 14:26:11,881 - mylogger - INFO - 2015-08-19    hold    miss
+2017-04-03 14:26:11,881 - mylogger - INFO - 2015-08-20    hold    miss
+2017-04-03 14:26:11,881 - mylogger - INFO - 2015-08-21    hold    miss
+2017-04-03 14:26:11,881 - mylogger - INFO - 2015-08-24    buy    hit
+2017-04-03 14:26:11,882 - mylogger - INFO - 2015-08-25    hold    miss
+2017-04-03 14:26:11,882 - mylogger - INFO - 2015-08-26    buy    hit
+2017-04-03 14:26:11,882 - mylogger - INFO - 2015-08-27    buy    hit
+2017-04-03 14:26:11,882 - mylogger - INFO - 2015-08-28    buy    miss
+2017-04-03 14:26:11,882 - mylogger - INFO - 2015-08-31    buy    miss
+2017-04-03 14:26:11,882 - mylogger - INFO - 2015-09-01    hold    miss
+2017-04-03 14:26:11,883 - mylogger - INFO - 2015-09-02    buy    miss
+2017-04-03 14:26:11,883 - mylogger - INFO - 2015-09-03    buy    miss
+2017-04-03 14:26:11,883 - mylogger - INFO - 2015-09-04    hold    miss
+2017-04-03 14:26:11,883 - mylogger - INFO - 2015-09-08    hold    miss
+2017-04-03 14:26:11,883 - mylogger - INFO - 2015-09-09    hold    miss
+2017-04-03 14:26:11,883 - mylogger - INFO - 2015-09-10    buy    hit
+2017-04-03 14:26:11,883 - mylogger - INFO - 2015-09-11    buy    hit
+2017-04-03 14:26:11,884 - mylogger - INFO - 2015-09-14    buy    hit
+2017-04-03 14:26:11,884 - mylogger - INFO - 2015-09-15    buy    hit
+2017-04-03 14:26:11,884 - mylogger - INFO - 2015-09-16    buy    miss
+2017-04-03 14:26:11,885 - mylogger - INFO - 2015-09-17    hold    miss
+2017-04-03 14:26:11,885 - mylogger - INFO - 2015-09-18    hold    miss
+2017-04-03 14:26:11,885 - mylogger - INFO - 2015-09-21    hold    miss
+2017-04-03 14:26:11,885 - mylogger - INFO - 2015-09-22    buy    hit
+2017-04-03 14:26:11,885 - mylogger - INFO - 2015-09-23    buy    hit
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-09-24    buy    miss
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-09-25    buy    miss
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-09-28    hold    miss
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-09-29    buy    hit
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-09-30    buy    miss
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-10-01    hold    miss
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-10-02    buy    hit
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-10-05    buy    hit
+2017-04-03 14:26:11,886 - mylogger - INFO - 2015-10-06    hold    miss
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-07    buy    miss
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-08    buy    hit
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-09    buy    miss
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-12    buy    hit
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-13    buy    miss
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-14    buy    hit
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-15    buy    miss
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-16    hold    miss
+2017-04-03 14:26:11,887 - mylogger - INFO - 2015-10-19    buy    hit
+2017-04-03 14:26:11,888 - mylogger - INFO - 2015-10-20    buy    miss
+2017-04-03 14:26:11,888 - mylogger - INFO - 2015-10-21    buy    hit
+2017-04-03 14:26:11,889 - mylogger - INFO - 2015-10-22    buy    hit
+2017-04-03 14:26:11,890 - mylogger - INFO - 2015-10-23    buy    miss
+2017-04-03 14:26:11,890 - mylogger - INFO - 2015-10-26    hold    miss
+2017-04-03 14:26:11,891 - mylogger - INFO - 2015-10-27    buy    hit
+2017-04-03 14:26:11,891 - mylogger - INFO - 2015-10-28    buy    hit
+2017-04-03 14:26:11,891 - mylogger - INFO - 2015-10-29    hold    miss
+2017-04-03 14:26:11,891 - mylogger - INFO - 2015-10-30    buy    hit
+2017-04-03 14:26:11,892 - mylogger - INFO - 2015-11-02    buy    hit
+2017-04-03 14:26:11,892 - mylogger - INFO - 2015-11-03    hold    miss
+2017-04-03 14:26:11,892 - mylogger - INFO - 2015-11-04    hold    miss
+2017-04-03 14:26:11,892 - mylogger - INFO - 2015-11-05    buy    hit
+2017-04-03 14:26:11,892 - mylogger - INFO - 2015-11-06    buy    miss
+2017-04-03 14:26:11,892 - mylogger - INFO - 2015-11-09    hold    miss
+2017-04-03 14:26:11,893 - mylogger - INFO - 2015-11-10    hold    miss
+2017-04-03 14:26:11,893 - mylogger - INFO - 2015-11-11    buy    miss
+2017-04-03 14:26:11,893 - mylogger - INFO - 2015-11-12    hold    miss
+2017-04-03 14:26:11,893 - mylogger - INFO - 2015-11-13    buy    hit
+2017-04-03 14:26:11,893 - mylogger - INFO - 2015-11-16    buy    miss
+2017-04-03 14:26:11,893 - mylogger - INFO - 2015-11-17    buy    hit
+2017-04-03 14:26:11,893 - mylogger - INFO - 2015-11-18    buy    hit
+2017-04-03 14:26:11,894 - mylogger - INFO - 2015-11-19    buy    hit
+2017-04-03 14:26:11,894 - mylogger - INFO - 2015-11-20    buy    miss
+2017-04-03 14:26:11,894 - mylogger - INFO - 2015-11-23    buy    hit
+2017-04-03 14:26:11,894 - mylogger - INFO - 2015-11-24    buy    miss
+2017-04-03 14:26:11,894 - mylogger - INFO - 2015-11-25    hold    miss
+2017-04-03 14:26:11,894 - mylogger - INFO - 2015-11-27    buy    hit
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-11-30    hold    miss
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-12-01    buy    miss
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-12-02    hold    miss
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-12-03    buy    hit
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-12-04    buy    miss
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-12-07    hold    miss
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-12-08    buy    miss
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-12-09    hold    miss
+2017-04-03 14:26:11,895 - mylogger - INFO - 2015-12-10    buy    miss
+2017-04-03 14:26:11,896 - mylogger - INFO - 2015-12-11    hold    miss
+2017-04-03 14:26:11,896 - mylogger - INFO - 2015-12-14    buy    miss
+2017-04-03 14:26:11,896 - mylogger - INFO - 2015-12-15    hold    miss
+2017-04-03 14:26:11,896 - mylogger - INFO - 2015-12-16    buy    miss
+2017-04-03 14:26:11,896 - mylogger - INFO - 2015-12-17    hold    miss
+2017-04-03 14:26:11,896 - mylogger - INFO - 2015-12-18    buy    hit
+2017-04-03 14:26:11,896 - mylogger - INFO - 2015-12-21    buy    miss
+2017-04-03 14:26:11,897 - mylogger - INFO - 2015-12-22    buy    hit
+2017-04-03 14:26:11,897 - mylogger - INFO - 2015-12-23    buy    miss
+2017-04-03 14:26:11,897 - mylogger - INFO - 2015-12-24    buy    miss
+2017-04-03 14:26:11,897 - mylogger - INFO - 2015-12-28    buy    hit
+2017-04-03 14:26:11,897 - mylogger - INFO - 2015-12-29    buy    miss
+2017-04-03 14:26:11,897 - mylogger - INFO - 2015-12-30    buy    miss
+2017-04-03 14:26:11,897 - mylogger - INFO - Hit number:189/483
+2017-04-03 14:26:11,897 - mylogger - INFO - Hit rate:0.391304347826087

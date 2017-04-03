@@ -47,7 +47,7 @@ action_prev = ''
 portfolio_prev = capital_base
 
 # Number of training 
-training_iters = 0
+training_iters = 1
 
 # Maximum iterations for network to converge
 epochs = 100
