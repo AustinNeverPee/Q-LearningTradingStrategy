@@ -3,15 +3,15 @@ Preprocess raw price data into the form of TP Matrix
 
 Author: YANG, Austin Liu
 Created Date: Mar. 21, 2017
-Modified Date: Apr. 3 2017
 """
 
 import numpy as np
 import pandas as pd
-
 import pytz
 from datetime import datetime
 from zipline.utils.factory import load_bars_from_yahoo
+import pickle
+
 import pdb
 
 
@@ -24,11 +24,11 @@ rows = ((0, 2), (2, 5), (5, 10), (10, 18), (18, 31), (31, 52), (52, 86), (86, 14
 columns = ((1, 2), (3, 5), (6, 10), (11, 18), (19, 31), (32, 52), (53, 86), (87, 141), (142, 230)) * 2
 
 
-# Load stock 
-def load_data():
+# Preprocess raw data into TP Matrix format
+def preproc_data():
     # Load data manually from Yahoo! finance
     start = datetime(2009, 1, 1, 0, 0, 0, 0, pytz.utc)
-    end = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
+    end = datetime(2016, 1, 1, 0, 0, 0, 0, pytz.utc)
     data = load_bars_from_yahoo(stocks = ['AAPL'],
                                 start = start,
                                 end = end)
@@ -57,15 +57,16 @@ def load_data():
                     if C_TPD * 100 >= rows[row][0] and C_TPD * 100 < rows[row][1]:
                         TP_matrix[1][row][col] = True
                         break
-        print(TP_matrix[0])
-        print(TP_matrix[1])
-    pdb.set_trace()
 
-    return data
+    return TP_matrixs
 
 
 if __name__ == '__main__':
-    # Load stock data
-    data = load_data()
-    print(type(data))
-    print(data)
+    # Preprocess raw data
+    TP_matrixs = preproc_data()
+
+    # Store TP Matrix into pickle format
+    output = open('TP_matrix.pkl', 'wb')
+    # Pickle dictionary using protocol 0.
+    pickle.dump(TP_matrixs, output)
+    output.close()

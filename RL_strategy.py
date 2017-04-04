@@ -8,7 +8,6 @@ Using epsilon-greedy algorithm to train
 
 Author: YANG, Austin Liu
 Created Date: Feb. 26, 2017
-Modified Date: Mar. 6 2017
 """
 
 
@@ -18,11 +17,12 @@ from zipline.algorithm import TradingAlgorithm
 from zipline.utils.factory import load_bars_from_yahoo
 import random
 import os
-
-from utils import *
+from global_values import *
 from train import *
 from test import *
 from log import MyLogger
+
+import pdb
 
 
 # Initialize log module
@@ -53,6 +53,50 @@ def load_data():
                                      end = end_test_data)
 
     return [data_train, data_test]
+
+
+# Initialize parameters used in training
+def initialize_params_train(iter):
+    # Clear training set
+    global data_train_sell, data_train_buy, data_train_hold
+    data_train_sell.clear()
+    data_train_buy.clear()
+    data_train_hold.clear()
+    
+    # Initialize saved previous information
+    global action_prev, state_prev, portfolio_prev
+    action_prev = ''
+    state_prev = []
+    portfolio_prev = capital_base
+
+    # Update epsilon
+    global epsilon
+    epsilon = pow(epsilon, iter)
+
+
+# Update weights of three networks:
+# "sell" network, "buy" network and "hold" network
+def Q_update():
+    global net_sell, net_buy, net_hold
+    # In case that training set has not enough data
+    # pdb.set_trace()
+    try:
+        # Train network of "sell"
+        print('sell network')
+        trainer_sell = BackpropTrainer(net_sell, data_train_sell, verbose = True, learningrate = alpha)
+        trainer_sell.trainUntilConvergence(maxEpochs = epochs)
+
+        # Train network of "buy"
+        print('buy network')
+        trainer_buy = BackpropTrainer(net_buy, data_train_buy, verbose = True, learningrate = alpha)
+        trainer_buy.trainUntilConvergence(maxEpochs = epochs)
+
+        # Train network of "hold"
+        print('hold network')
+        trainer_hold = BackpropTrainer(net_hold, data_train_hold, verbose = True, learningrate = alpha)
+        trainer_hold.trainUntilConvergence(maxEpochs = epochs)
+    except Exception as e:  
+        pass
 
 
 # Train the agent

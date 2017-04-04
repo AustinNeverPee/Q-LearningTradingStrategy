@@ -6,18 +6,10 @@ Modified Date: Mar. 6 2017
 """
 
 
-from zipline.api import (
-    order,
-    record,
-    symbol,
-    history,
-    get_datetime,
-    set_long_only
-)
+from zipline.api import order, record, symbol, history, get_datetime, set_long_only
 import matplotlib.pyplot as plt
 import pandas as pd
-
-from utils import *
+from global_values import *
 
 
 def initialize_test(context):

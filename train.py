@@ -10,10 +10,9 @@ import pytz
 from datetime import datetime
 from zipline.api import order, record, symbol, history
 import random
-
 from pybrain.datasets import SupervisedDataSet
+from global_values import *
 
-from utils import *
 
 import pdb
 
@@ -22,21 +21,10 @@ def initialize_train(context):
     # AAPL
     context.security = symbol('AAPL')
 
-    # Counter for days
-    context.counter = 0
-
-    start = datetime(2011, 1, 1, 0, 0, 0, 0, pytz.utc)
-
-    print('here!!!!')
     print(directory_log)
 
 def handle_data_train(context, data):
     pdb.set_trace()
-    # Skip first 21 days to get full windows
-    context.counter += 1
-    if context.counter < 21:
-        return
-
     # Get current state
     state = data.history(context.security, 'price', 21, '1d').values.tolist()
     for i in range(20, 0, -1):
