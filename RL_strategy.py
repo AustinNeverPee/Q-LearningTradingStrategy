@@ -41,16 +41,16 @@ def load_data():
     # Training data
     start_train_data = datetime(2010, 1, 1, 0, 0, 0, 0, pytz.utc)
     end_train_data = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
-    data_train = load_bars_from_yahoo(stocks = ['AAPL'],
-                                      start = start_train_data,
-                                      end = end_train_data)
+    data_train = load_bars_from_yahoo(stocks=['AAPL'],
+                                      start=start_train_data,
+                                      end=end_train_data)
 
     # Testing data
     start_test_data = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
     end_test_data = datetime(2016, 1, 1, 0, 0, 0, 0, pytz.utc)
-    data_test = load_bars_from_yahoo(stocks = ['AAPL'],
-                                     start = start_test_data,
-                                     end = end_test_data)
+    data_test = load_bars_from_yahoo(stocks=['AAPL'],
+                                     start=start_test_data,
+                                     end=end_test_data)
 
     return [data_train, data_test]
 
@@ -62,7 +62,7 @@ def initialize_params_train(iter):
     data_train_sell.clear()
     data_train_buy.clear()
     data_train_hold.clear()
-    
+
     # Initialize saved previous information
     global action_prev, state_prev, portfolio_prev
     action_prev = ''
@@ -83,40 +83,43 @@ def Q_update():
     try:
         # Train network of "sell"
         print('sell network')
-        trainer_sell = BackpropTrainer(net_sell, data_train_sell, verbose = True, learningrate = alpha)
-        trainer_sell.trainUntilConvergence(maxEpochs = epochs)
+        trainer_sell = BackpropTrainer(
+            net_sell, data_train_sell, verbose=True, learningrate=alpha)
+        trainer_sell.trainUntilConvergence(maxEpochs=epochs)
 
         # Train network of "buy"
         print('buy network')
-        trainer_buy = BackpropTrainer(net_buy, data_train_buy, verbose = True, learningrate = alpha)
-        trainer_buy.trainUntilConvergence(maxEpochs = epochs)
+        trainer_buy = BackpropTrainer(
+            net_buy, data_train_buy, verbose=True, learningrate=alpha)
+        trainer_buy.trainUntilConvergence(maxEpochs=epochs)
 
         # Train network of "hold"
         print('hold network')
-        trainer_hold = BackpropTrainer(net_hold, data_train_hold, verbose = True, learningrate = alpha)
-        trainer_hold.trainUntilConvergence(maxEpochs = epochs)
-    except Exception as e:  
+        trainer_hold = BackpropTrainer(
+            net_hold, data_train_hold, verbose=True, learningrate=alpha)
+        trainer_hold.trainUntilConvergence(maxEpochs=epochs)
+    except Exception as e:
         pass
 
 
 # Train the agent
-# Learn from the environment 
+# Learn from the environment
 def agent_train(data_train):
     for iter in range(0, training_iters):
         print('Iteration :', iter + 1)
 
         # Initialize parameters used in training
         initialize_params_train(iter)
-        
-        # Create algorithm object passing in initialize, 
+
+        # Create algorithm object passing in initialize,
         # handle_data functions and so on
         # start_train = datetime(2011, 1, 1, 0, 0, 0, 0, pytz.utc)
         # end_train = datetime(2014, 1, 1, 0, 0, 0, 0, pytz.utc)
-        algo = TradingAlgorithm(initialize = initialize_train, 
-                                handle_data = handle_data_train,
-                                data_frequency = 'daily',
-                                capital_base = capital_base)
-        
+        algo = TradingAlgorithm(initialize=initialize_train,
+                                handle_data=handle_data_train,
+                                data_frequency='daily',
+                                capital_base=capital_base)
+
         # Run algorithm
         perf = algo.run(data_train)
 
@@ -131,12 +134,12 @@ def agent_test(data_test):
     # handle_data functions
     # start_test = datetime(2015, 1, 1, 0, 0, 0, 0, pytz.utc)
     # end_test = datetime(2016, 1, 1, 0, 0, 0, 0, pytz.utc)
-    algo_obj = TradingAlgorithm(initialize = initialize_test, 
-                                handle_data = handle_data_test,
-                                analyze = analyze_test,
-                                data_frequency = 'daily',
-                                capital_base = capital_base)
-    
+    algo_obj = TradingAlgorithm(initialize=initialize_test,
+                                handle_data=handle_data_test,
+                                analyze=analyze_test,
+                                data_frequency='daily',
+                                capital_base=capital_base)
+
     # Run algorithm
     perf = algo_obj.run(data_test)
 
@@ -144,7 +147,7 @@ def agent_test(data_test):
 if __name__ == '__main__':
     # Initialize log module
     initialize_log()
-    
+
     # Load stock data
     [data_train, data_test] = load_data()
 

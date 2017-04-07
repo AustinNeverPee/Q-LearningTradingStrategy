@@ -48,7 +48,7 @@ pkl_file.close()
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
 # Starting cash
 capital_base = 100000
-# Largest trading amount allowed 
+# Largest trading amount allowed
 mu = 100
 # Previous portfolio
 portfolio_prev = capital_base
@@ -75,6 +75,8 @@ state_prev = []
 action_prev = ''
 # Q-function
 # Use nueral network to estimate
+
+
 def Q_function(state, action):
     if action == "sell":
         return net_sell.activate(state)
@@ -82,6 +84,8 @@ def Q_function(state, action):
         return net_buy.activate(state)
     elif action == "hold":
         return net_hold.activate(state)
+
+
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
 '*                            END                              *'
 '*                         Q-Learning                          *'
@@ -92,7 +96,7 @@ def Q_function(state, action):
 '*                           Model                             *'
 '*                           START                             *'
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
-# Number of training 
+# Number of training
 training_iters = 1
 # Maximum iterations for network to converge
 epochs = 100

@@ -23,12 +23,13 @@ def initialize_train(context):
 
     print(directory_log)
 
+
 def handle_data_train(context, data):
     pdb.set_trace()
     # Get current state
     state = data.history(context.security, 'price', 21, '1d').values.tolist()
     for i in range(20, 0, -1):
-        state[i] /= state[i-1]
+        state[i] /= state[i - 1]
     del state[0]
 
     # Epsilon-greedy Algorithm
@@ -59,7 +60,8 @@ def handle_data_train(context, data):
 
     # Produce training data
     global state_prev, action_prev, portfolio_prev
-    y = context.portfolio.portfolio_value - portfolio_prev + gama * Q_function(state, action)
+    y = context.portfolio.portfolio_value - \
+        portfolio_prev + gama * Q_function(state, action)
     if action_prev == 'sell':
         # Previous taken action is "sell"
         global data_train_sell
