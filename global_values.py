@@ -7,11 +7,12 @@ Created Date: Feb. 26, 2017
 
 
 from datetime import datetime
-from pybrain.structure import *
-from pybrain.datasets import SupervisedDataSet
-from pybrain.supervised.trainers import BackpropTrainer
 import pickle
 from log import MyLogger
+
+import tensorflow as tf
+from tensorflow.contrib import learn
+from tensorflow.contrib.learn.python.learn.estimators import model_fn as model_fn_lib
 
 
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
@@ -98,54 +99,118 @@ def Q_function(state, action):
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
 # Number of training
 training_iters = 1
-# Maximum iterations for network to converge
-epochs = 100
 # Update rate of neural network
-alpha = 0.01
-# Three nueral networks to simulate sell, buy and hold Q-function
-# Network of "sell"
-net_sell = FeedForwardNetwork()
-in_layer_sell = LinearLayer(20, name='in_layer_sell')
-hidden_layer_sell = SigmoidLayer(30, name='hidden_layer_sell')
-out_layer_sell = LinearLayer(1, name='out_layer_sell')
-net_sell.addInputModule(in_layer_sell)
-net_sell.addModule(hidden_layer_sell)
-net_sell.addOutputModule(out_layer_sell)
-in_to_hidden_sell = FullConnection(in_layer_sell, hidden_layer_sell)
-hidden_to_out_sell = FullConnection(hidden_layer_sell, out_layer_sell)
-net_sell.addConnection(in_to_hidden_sell)
-net_sell.addConnection(hidden_to_out_sell)
-net_sell.sortModules()
-# Network of "buy"
-net_buy = FeedForwardNetwork()
-in_layer_buy = LinearLayer(20, name='in_layer_buy')
-hidden_layer_buy = SigmoidLayer(30, name='hidden_layer_buy')
-out_layer_buy = LinearLayer(1, name='out_layer_buy')
-net_buy.addInputModule(in_layer_buy)
-net_buy.addModule(hidden_layer_buy)
-net_buy.addOutputModule(out_layer_buy)
-in_to_hidden_buy = FullConnection(in_layer_buy, hidden_layer_buy)
-hidden_to_out_buy = FullConnection(hidden_layer_buy, out_layer_buy)
-net_buy.addConnection(in_to_hidden_buy)
-net_buy.addConnection(hidden_to_out_buy)
-net_buy.sortModules()
-# Network of "hold"
-net_hold = FeedForwardNetwork()
-in_layer_hold = LinearLayer(20, name='in_layer_hold')
-hidden_layer_hold = SigmoidLayer(30, name='hidden_layer_hold')
-out_layer_hold = LinearLayer(1, name='out_layer_hold')
-net_hold.addInputModule(in_layer_hold)
-net_hold.addModule(hidden_layer_hold)
-net_hold.addOutputModule(out_layer_hold)
-in_to_hidden_hold = FullConnection(in_layer_hold, hidden_layer_hold)
-hidden_to_out_hold = FullConnection(hidden_layer_hold, out_layer_hold)
-net_hold.addConnection(in_to_hidden_hold)
-net_hold.addConnection(hidden_to_out_hold)
-net_hold.sortModules()
-# Three training sets for three different networks
-data_train_sell = SupervisedDataSet(20, 1)
-data_train_buy = SupervisedDataSet(20, 1)
-data_train_hold = SupervisedDataSet(20, 1)
+alpha = 0.001
+
+
+def Q_cnn_model_fn(features, labels, mode):
+    """Model function for CNN."""
+    """CNN model to simulate sell, buy and hold Q-function"""
+    """Three models with the same structure"""
+    # Input Layer
+    # Reshape X to 4-D tensor: [batch_size, width, height, channels]
+    # Each TP_matrix can be regarded as 18x18 image with 1 color channel
+    input_layer = tf.reshape(features, [-1, 18, 18, 1])
+
+    # Convolutional Layer #1
+    # Computes 32 features using a 3x3 filter with ReLU activation.
+    # Padding is added to preserve width and height.
+    # Input Tensor Shape: [batch_size, 18, 18, 1]
+    # Output Tensor Shape: [batch_size, 18, 18, 32]
+    conv1 = tf.layers.conv2d(
+        inputs=input_layer,
+        filters=32,
+        kernel_size=[3, 3],
+        padding="same",
+        activation=tf.nn.relu)
+
+    # Pooling Layer #1
+    # First max pooling layer with a 2x2 filter and stride of 2
+    # Input Tensor Shape: [batch_size, 18, 18, 32]
+    # Output Tensor Shape: [batch_size, 9, 9, 32]
+    pool1 = tf.layers.max_pooling2d(
+        inputs=conv1,
+        pool_size=[2, 2],
+        strides=2)
+
+    # Convolutional Layer #2
+    # Computes 64 features using a 3x3 filter.
+    # Padding is added to preserve width and height.
+    # Input Tensor Shape: [batch_size, 9, 9, 32]
+    # Output Tensor Shape: [batch_size, 9, 9, 64]
+    conv2 = tf.layers.conv2d(
+        inputs=pool1,
+        filters=64,
+        kernel_size=[3, 3],
+        padding="same",
+        activation=tf.nn.relu)
+
+    # Pooling Layer #2
+    # Second max pooling layer with a 2x2 filter and stride of 2
+    # Input Tensor Shape: [batch_size, 9, 9, 64]
+    # Output Tensor Shape: [batch_size, 5, 5, 64]
+    pool2 = tf.layers.max_pooling2d(
+        inputs=conv2,
+        pool_size=[2, 2],
+        strides=2,
+        padding='same')
+
+    # Flatten tensor into a batch of vectors
+    # Input Tensor Shape: [batch_size, 5, 5, 64]
+    # Output Tensor Shape: [batch_size, 5 * 5 * 64]
+    pool2_flat = tf.reshape(pool2, [-1, 5 * 5 * 64])
+
+    # Dense Layer
+    # Densely connected layer with 1024 neurons
+    # Input Tensor Shape: [batch_size, 5 * 5 * 64]
+    # Output Tensor Shape: [batch_size, 1024]
+    dense = tf.layers.dense(
+        inputs=pool2_flat,
+        units=1024,
+        activation=tf.nn.relu)
+
+    # Add dropout operation; 0.6 probability that element will be kept
+    dropout = tf.layers.dropout(
+        inputs=dense,
+        rate=0.4,
+        training=mode == learn.ModeKeys.TRAIN)
+
+    # Logits layer
+    # Input Tensor Shape: [batch_size, 1024]
+    # Output Tensor Shape: [batch_size, 1]
+    logits = tf.layers.dense(
+        inputs=dropout,
+        units=1)
+
+    loss = None
+    train_op = None
+
+    # Calculate Loss (for both TRAIN and EVAL modes)
+    # Mean Square Error
+    if mode != learn.ModeKeys.INFER:
+        loss = tf.losses.mean_squared_error(
+            labels=labels,
+            logits=logits)
+
+    # Configure the Training Op (for TRAIN mode)
+    # Adam Optimizer
+    if mode == learn.ModeKeys.TRAIN:
+        train_op = tf.contrib.layers.optimize_loss(
+            loss=loss,
+            global_step=tf.contrib.framework.get_global_step(),
+            learning_rate=alpha,
+            optimizer="Adam")
+
+    # Generate Predictions
+    predictions = {
+        "results": logits
+    }
+
+    # Return a ModelFnOps object
+    return model_fn_lib.ModelFnOps(
+        mode=mode, predictions=predictions, loss=loss, train_op=train_op)
+
+
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
 '*                            END                              *'
 '*                           Model                             *'
