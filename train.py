@@ -8,12 +8,16 @@ Modified Date: Mar. 6 2017
 
 import pytz
 from datetime import datetime
-from zipline.api import order, record, symbol, history
+from zipline.api import (
+    order,
+    symbol,
+    get_datetime)
 import random
-from pybrain.datasets import SupervisedDataSet
-from global_values import *
-
-
+from global_values import (
+    directory_log,
+    TP_matrixs,
+    mu, portfolio_prev,
+    epsilon, gama, action_set, date_prev, action_prev, Q_function)
 import pdb
 
 
@@ -26,11 +30,12 @@ def initialize_train(context):
 
 def handle_data_train(context, data):
     pdb.set_trace()
+
+    # Get current date
+    now = str(get_datetime('US/Eastern'))[0:11] + "00:00:00+0000"
+
     # Get current state
-    state = data.history(context.security, 'price', 21, '1d').values.tolist()
-    for i in range(20, 0, -1):
-        state[i] /= state[i - 1]
-    del state[0]
+    state = TP_matrixs.ix(now)
 
     # Epsilon-greedy Algorithm
     # Choose an action to execute according to current state
@@ -59,7 +64,7 @@ def handle_data_train(context, data):
         pass
 
     # Produce training data
-    global state_prev, action_prev, portfolio_prev
+    global date_prev, action_prev, portfolio_prev
     y = context.portfolio.portfolio_value - \
         portfolio_prev + gama * Q_function(state, action)
     if action_prev == 'sell':

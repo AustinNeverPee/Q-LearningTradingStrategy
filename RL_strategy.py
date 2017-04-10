@@ -19,7 +19,6 @@ import os
 from global_values import *
 from train import *
 from test import *
-from log import MyLogger
 
 import tensorflow as tf
 from tensorflow.contrib import learn
@@ -77,10 +76,10 @@ def initialize_params_train(iter):
     epsilon = pow(epsilon, iter)
 
 
-# Update weights of three networks:
-# "sell" network, "buy" network and "hold" network
+# Update weights of three models:
+# "sell" model, "buy" model and "hold" model
 def Q_update():
-    def main(unused_argv):
+    for action in action_set:
         # Load training and eval data
         mnist = learn.datasets.load_dataset("mnist")
         train_data = mnist.train.images  # Returns np.array
@@ -88,23 +87,16 @@ def Q_update():
         eval_data = mnist.test.images  # Returns np.array
         eval_labels = np.asarray(mnist.test.labels, dtype=np.int32)
 
-        # Create the Estimator
+        # Create the estimator
         mnist_classifier = learn.Estimator(
-            model_fn=cnn_model_fn, model_dir="/Users/austin/Documents/MSc/Second Semester/Independent Project/stage work/April/CNN/tmp/mnist_convnet_model")
-
-        # Set up logging for predictions
-        # Log the values in the "Softmax" tensor with label "probabilities"
-        tensors_to_log = {"probabilities": "softmax_tensor"}
-        logging_hook = tf.train.LoggingTensorHook(
-            tensors=tensors_to_log, every_n_iter=50)
+            model_fn=cnn_model_fn,
+            model_dir=model_dirs[action])
 
         # Train the model
         mnist_classifier.fit(
             x=train_data,
             y=train_labels,
-            batch_size=100,
-            steps=100,
-            monitors=[logging_hook])
+            steps=training_steps)
 
         # Configure the accuracy metric for evaluation
         metrics = {
@@ -118,42 +110,12 @@ def Q_update():
             x=eval_data, y=eval_labels, metrics=metrics)
         print(eval_results)
 
-    try:
-        print('%dst run!!!!' % (i))
-        tf.app.run()
-    except:
-        pass
-
-    global net_sell, net_buy, net_hold
-    # In case that training set has not enough data
-    # pdb.set_trace()
-    try:
-        # Train network of "sell"
-        print('sell network')
-        trainer_sell = BackpropTrainer(
-            net_sell, data_train_sell, verbose=True, learningrate=alpha)
-        trainer_sell.trainUntilConvergence(maxEpochs=epochs)
-
-        # Train network of "buy"
-        print('buy network')
-        trainer_buy = BackpropTrainer(
-            net_buy, data_train_buy, verbose=True, learningrate=alpha)
-        trainer_buy.trainUntilConvergence(maxEpochs=epochs)
-
-        # Train network of "hold"
-        print('hold network')
-        trainer_hold = BackpropTrainer(
-            net_hold, data_train_hold, verbose=True, learningrate=alpha)
-        trainer_hold.trainUntilConvergence(maxEpochs=epochs)
-    except Exception as e:
-        pass
-
 
 # Train the agent
 # Learn from the environment
 def agent_train(data_train):
-    for iter in range(0, training_iters):
-        print('Iteration :', iter + 1)
+    for iter in range(0, Q_training_iters):
+        mylogger.logger.info('Agent Iteration :', iter + 1)
 
         # Initialize parameters used in training
         initialize_params_train(iter)

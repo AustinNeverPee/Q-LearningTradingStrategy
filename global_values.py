@@ -7,9 +7,10 @@ Created Date: Feb. 26, 2017
 
 
 from datetime import datetime
+from os import getcwd
 import pickle
 from log import MyLogger
-
+import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import learn
 from tensorflow.contrib.learn.python.learn.estimators import model_fn as model_fn_lib
@@ -60,53 +61,27 @@ portfolio_prev = capital_base
 
 
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
-'*                         Q-Learning                          *'
-'*                           START                             *'
-'*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
-# Parameter used in Epsilon-greedy Algorithm
-epsilon = 0.955
-# Discount factor
-gama = 0.95
-# Action set
-# Contain all the possible actions to execute in each state
-action_set = ['sell', 'buy', 'hold']
-# Previous state
-state_prev = []
-# Previous taken action
-action_prev = ''
-# Q-function
-# Use nueral network to estimate
-
-
-def Q_function(state, action):
-    if action == "sell":
-        return net_sell.activate(state)
-    elif action == "buy":
-        return net_buy.activate(state)
-    elif action == "hold":
-        return net_hold.activate(state)
-
-
-'*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
-'*                            END                              *'
-'*                         Q-Learning                          *'
-'*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
-
-
-'*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
 '*                           Model                             *'
 '*                           START                             *'
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
-# Number of training
-training_iters = 1
-# Update rate of neural network
+# Update rate of CNN
 alpha = 0.001
+# Training steps
+training_steps = 100
+# Model directory
+model_dirs = {
+    "sell": getcwd() + "/model/sell_convnet_model",
+    "buy": getcwd() + "/model/buy_convnet_model",
+    "hold": getcwd() + "/model/hold_convnet_model"}
+# Dataset of models
+dataset_sell = np.array()
 
 
-def Q_cnn_model_fn(features, labels, mode):
-    """Model function for CNN."""
-    """CNN model to simulate sell, buy and hold Q-function"""
-    """Three models with the same structure"""
+def cnn_model_fn(features, labels, mode):
+    """Model function for CNN.
+       CNN model to simulate sell, buy and hold Q-function
+       Three models with the same structure
+    """
     # Input Layer
     # Reshape X to 4-D tensor: [batch_size, width, height, channels]
     # Each TP_matrix can be regarded as 18x18 image with 1 color channel
@@ -214,4 +189,44 @@ def Q_cnn_model_fn(features, labels, mode):
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
 '*                            END                              *'
 '*                           Model                             *'
+'*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
+
+
+'*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
+'*                         Q-Learning                          *'
+'*                           START                             *'
+'*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
+# Number of agent training
+Q_training_iters = 100
+# Parameter used in Epsilon-greedy Algorithm
+epsilon = 0.955
+# Discount factor
+gama = 0.95
+# Action set
+# Contain all the possible actions to execute in each state
+action_set = ['sell', 'buy', 'hold']
+# Previous date
+date_prev = []
+# Previous taken action
+action_prev = ''
+
+
+def Q_function(state, action):
+    """Q-function
+       Use trained models to predict
+    """
+    # Create the estimator
+    Q_estimator = learn.Estimator(
+        model_fn=cnn_model_fn,
+        model_dir=model_dirs[action])
+
+    # Predict using the estimator
+    predictions = Q_estimator.predict(x=state)
+
+    return predictions[0]["results"]
+
+
+'*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
+'*                            END                              *'
+'*                         Q-Learning                          *'
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
