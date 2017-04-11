@@ -23,8 +23,8 @@ columns = ((1, 2), (3, 5), (6, 10), (11, 18), (19, 31),
            (32, 52), (53, 86), (87, 141), (142, 230)) * 2
 
 
-# Preprocess raw data into TP Matrix format
 def preproc_data():
+    """Preprocess raw data into TP Matrix format"""
     # Load data manually from Yahoo! finance
     start = datetime(2009, 1, 1, 0, 0, 0, 0, pytz.utc)
     end = datetime(2016, 1, 1, 0, 0, 0, 0, pytz.utc)

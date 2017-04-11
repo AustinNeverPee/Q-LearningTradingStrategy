@@ -6,18 +6,25 @@ Modified Date: Mar. 6 2017
 """
 
 
-from zipline.api import order, record, symbol, history, get_datetime, set_long_only
+from zipline.api import (
+    order,
+    record,
+    symbol,
+    history,
+    get_datetime,
+    set_long_only)
 import matplotlib.pyplot as plt
 import pandas as pd
-from global_values import *
+from global_values import (
+    mylogger, directory_log,
+    TP_matrixs,
+    capital_base, mu,
+    action_set, Q_function)
 
 
 def initialize_test(context):
     # AAPL
     context.security = symbol('AAPL')
-
-    # Counter for days
-    context.counter = 0
 
     # Algorithm will only take long positions.
     # It will stop if encounters a short position.
@@ -25,17 +32,11 @@ def initialize_test(context):
 
 
 def handle_data_test(context, data):
-    # Skip first 21 days to get full windows
-    context.counter += 1
-    if context.counter < 21:
-        record(AAPL=data.current(context.security, 'price'))
-        return
+    # Get current date
+    now = str(get_datetime('US/Eastern'))[0:11] + "00:00:00+0000"
 
     # Get current state
-    state = data.history(context.security, 'price', 21, '1d').values.tolist()
-    for i in range(20, 0, -1):
-        state[i] /= state[i - 1]
-    del state[0]
+    state = TP_matrixs.ix(now)
 
     # Choose the action of the highest Q-Value
     action_values = [Q_function(state, action_set[0]),
@@ -44,7 +45,7 @@ def handle_data_test(context, data):
     action = action_set[action_values.index(max(action_values))]
 
     # Execute chosen action
-    now = str(get_datetime('US/Eastern'))[0: 10]
+    now = now[0: 10]
     if action == action_set[0]:
         # Sell
         # No short
@@ -72,8 +73,8 @@ def handle_data_test(context, data):
            actions=action)
 
 
-# Anylyze the result of algorithm
 def analyze_test(context=None, results=None):
+    """Anylyze the result of algorithm"""
     # Total profit and loss
     total_pl = (results['portfolio_value'][-1] - capital_base) / capital_base
     mylogger.logger.info('Total profit and loss: ' + str(total_pl))

@@ -52,8 +52,6 @@ pkl_file.close()
 capital_base = 100000
 # Largest trading amount allowed
 mu = 100
-# Previous portfolio
-portfolio_prev = capital_base
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
 '*                            END                              *'
 '*                          Trading                            *'
@@ -64,17 +62,20 @@ portfolio_prev = capital_base
 '*                           Model                             *'
 '*                           START                             *'
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
-# Update rate of CNN
-alpha = 0.001
-# Training steps
-training_steps = 100
 # Model directory
 model_dirs = {
     "sell": getcwd() + "/model/sell_convnet_model",
     "buy": getcwd() + "/model/buy_convnet_model",
     "hold": getcwd() + "/model/hold_convnet_model"}
-# Dataset of models
-dataset_sell = np.array()
+# Data and labels of models
+Q_data = {
+    "sell": np.array([]),
+    "buy": np.array([]),
+    "hold": np.array([])}
+Q_labels = {
+    "sell": np.array([]),
+    "buy": np.array([]),
+    "hold": np.array([])}
 
 
 def cnn_model_fn(features, labels, mode):
@@ -169,6 +170,8 @@ def cnn_model_fn(features, labels, mode):
 
     # Configure the Training Op (for TRAIN mode)
     # Adam Optimizer
+    # Update rate of CNN
+    alpha = 0.001
     if mode == learn.ModeKeys.TRAIN:
         train_op = tf.contrib.layers.optimize_loss(
             loss=loss,
@@ -196,12 +199,8 @@ def cnn_model_fn(features, labels, mode):
 '*                         Q-Learning                          *'
 '*                           START                             *'
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
-# Number of agent training
-Q_training_iters = 100
 # Parameter used in Epsilon-greedy Algorithm
 epsilon = 0.955
-# Discount factor
-gama = 0.95
 # Action set
 # Contain all the possible actions to execute in each state
 action_set = ['sell', 'buy', 'hold']
@@ -209,6 +208,8 @@ action_set = ['sell', 'buy', 'hold']
 date_prev = []
 # Previous taken action
 action_prev = ''
+# Previous portfolio
+portfolio_prev = capital_base
 
 
 def Q_function(state, action):
