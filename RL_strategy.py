@@ -30,7 +30,11 @@ from test import (
     handle_data_test,
     analyze_test)
 import numpy as np
+import tensorflow as tf
 from tensorflow.contrib import learn
+from tensorflow.contrib.learn.python import SKCompat
+# tf.logging.set_verbosity(tf.logging.INFO)
+
 
 import pdb
 
@@ -38,7 +42,7 @@ import pdb
 # Training steps
 training_steps = 100
 # Number of agent training
-Q_training_iters = 100
+Q_training_iters = 50
 
 
 def initialize_log():
@@ -77,13 +81,13 @@ def initialize_params_train(iter):
     # Initialize labeled data
     global Q_data, Q_labels
     Q_data = {
-        "sell": np.array([]),
-        "buy": np.array([]),
-        "hold": np.array([])}
+        "sell": np.array([], dtype=np.float32),
+        "buy": np.array([], dtype=np.float32),
+        "hold": np.array([], dtype=np.float32)}
     Q_labels = {
-        "sell": np.array([]),
-        "buy": np.array([]),
-        "hold": np.array([])}
+        "sell": np.array([], dtype=np.float32),
+        "buy": np.array([], dtype=np.float32),
+        "hold": np.array([], dtype=np.float32)}
 
     # Initialize saved previous information
     global date_prev, state_prev, portfolio_prev
@@ -93,7 +97,7 @@ def initialize_params_train(iter):
 
     # Update epsilon
     global epsilon
-    epsilon = pow(epsilon, iter)
+    epsilon = pow(epsilon, iter + 1)
 
 
 def Q_update():
@@ -101,15 +105,22 @@ def Q_update():
        "sell" model, "buy" model and "hold" model
     """
     for action in action_set:
+        mylogger.logger.info("Update " + action + " model")
+
+        # validation_monitor = learn.monitors.ValidationMonitor(
+        #     Q_data[action],
+        #     Q_labels[action],
+        #     every_n_steps=50)
+
         # Create the estimator
-        Q_estimator = learn.Estimator(
+        Q_estimator = SKCompat(learn.Estimator(
             model_fn=cnn_model_fn,
-            model_dir=model_dirs[action])
+            model_dir=model_dirs[action]))
 
         # Train the model
         Q_estimator.fit(
-            x=Q_data,
-            y=Q_labels,
+            x=Q_data[action],
+            y=Q_labels[action],
             steps=training_steps)
 
 
@@ -118,10 +129,7 @@ def agent_train(data_train):
        Learn from the environment
     """
     for iter in range(0, Q_training_iters):
-        mylogger.logger.info('Agent Iteration :', iter + 1)
-
-        # Initialize parameters used in training
-        initialize_params_train(iter)
+        mylogger.logger.info("Agent Iteration :" + str(iter + 1))
 
         # Create algorithm object passing in initialize,
         # handle_data functions and so on
@@ -135,6 +143,9 @@ def agent_train(data_train):
 
         # Train neural network with produced training set
         Q_update()
+
+        # Initialize parameters used in training
+        initialize_params_train(iter)
 
 
 def agent_test(data_test):

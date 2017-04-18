@@ -7,13 +7,19 @@ Created Date: Feb. 26, 2017
 
 
 from datetime import datetime
-from os import getcwd
+from os import (
+    getcwd,
+    path)
+from random import uniform
 import pickle
 from log import MyLogger
 import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import learn
 from tensorflow.contrib.learn.python.learn.estimators import model_fn as model_fn_lib
+from tensorflow.contrib.learn.python import SKCompat
+
+import pdb
 
 
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'
@@ -69,13 +75,13 @@ model_dirs = {
     "hold": getcwd() + "/model/hold_convnet_model"}
 # Data and labels of models
 Q_data = {
-    "sell": np.array([]),
-    "buy": np.array([]),
-    "hold": np.array([])}
+    "sell": np.array([], dtype=np.float32),
+    "buy": np.array([], dtype=np.float32),
+    "hold": np.array([], dtype=np.float32)}
 Q_labels = {
-    "sell": np.array([]),
-    "buy": np.array([]),
-    "hold": np.array([])}
+    "sell": np.array([], dtype=np.float32),
+    "buy": np.array([], dtype=np.float32),
+    "hold": np.array([], dtype=np.float32)}
 
 
 def cnn_model_fn(features, labels, mode):
@@ -156,7 +162,8 @@ def cnn_model_fn(features, labels, mode):
     # Output Tensor Shape: [batch_size, 1]
     logits = tf.layers.dense(
         inputs=dropout,
-        units=1)
+        units=1,
+        name="logits")
 
     loss = None
     train_op = None
@@ -165,8 +172,8 @@ def cnn_model_fn(features, labels, mode):
     # Mean Square Error
     if mode != learn.ModeKeys.INFER:
         loss = tf.losses.mean_squared_error(
-            labels=labels,
-            logits=logits)
+            labels=tf.reshape(labels, [-1, 1]),
+            predictions=logits)
 
     # Configure the Training Op (for TRAIN mode)
     # Adam Optimizer
@@ -216,15 +223,20 @@ def Q_function(state, action):
     """Q-function
        Use trained models to predict
     """
-    # Create the estimator
-    Q_estimator = learn.Estimator(
-        model_fn=cnn_model_fn,
-        model_dir=model_dirs[action])
+    if path.exists(getcwd() + "/model"):
+        # If model already exists, then use the model to predict
+        # Create the estimator
+        Q_estimator = SKCompat(learn.Estimator(
+            model_fn=cnn_model_fn,
+            model_dir=model_dirs[action]))
 
-    # Predict using the estimator
-    predictions = Q_estimator.predict(x=state)
+        # Predict using the estimator
+        predictions = Q_estimator.predict(x=state)
 
-    return predictions[0]["results"]
+        return predictions["results"][0]
+    else:
+        # If model doesn't exist, just return random value
+        return uniform(-10000, 10000)
 
 
 '*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*'

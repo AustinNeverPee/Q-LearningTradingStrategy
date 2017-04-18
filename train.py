@@ -34,13 +34,11 @@ def initialize_train(context):
 
 
 def handle_data_train(context, data):
-    pdb.set_trace()
-
     # Get current date
     now = str(get_datetime('US/Eastern'))[0:11] + "00:00:00+0000"
 
     # Get current state
-    state = TP_matrixs.ix(now)
+    state = np.float32(TP_matrixs.ix[now].values)
 
     # Epsilon-greedy Algorithm
     # Choose an action to execute according to current state
@@ -69,18 +67,22 @@ def handle_data_train(context, data):
         pass
 
     # Construct labeled data
-    global date_prev, action_prev, portfolio_prev
-    y = context.portfolio.portfolio_value - \
-        portfolio_prev + gama * Q_function(state, action)
-    global Q_data, Q_labels
-    # Add new data
-    if Q_data[action_prev].size:
-        Q_data[action_prev] = np.array([TP_matrixs.ix(date_prev)])
-    else:
-        Q_data[action_prev] = np.vstack(
-            (Q_data[action_prev], [TP_matrixs.ix(date_prev)]))
-    # Add new label
-    Q_labels[action_prev] = np.append(Q_labels[action_prev], y)
+    global date_prev, action_prev, portfolio_prev, Q_data, Q_labels
+    # Juage if it's the first day
+    if action_prev != "":
+        y = context.portfolio.portfolio_value - \
+            portfolio_prev + gama * Q_function(state, action)
+        # Add new data
+        if Q_data[action_prev].size == 0:
+            Q_data[action_prev] = np.array(
+                [TP_matrixs.ix[date_prev].values.tolist()],
+                dtype=np.float32)
+        else:
+            Q_data[action_prev] = np.vstack((
+                Q_data[action_prev],
+                [TP_matrixs.ix[date_prev].values.tolist()]))
+        # Add new label
+        Q_labels[action_prev] = np.append(Q_labels[action_prev], y)
 
     # Update saved previous information
     date_prev = now

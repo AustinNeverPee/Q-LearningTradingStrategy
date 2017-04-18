@@ -36,7 +36,7 @@ def handle_data_test(context, data):
     now = str(get_datetime('US/Eastern'))[0:11] + "00:00:00+0000"
 
     # Get current state
-    state = TP_matrixs.ix(now)
+    state = TP_matrixs.ix[now]
 
     # Choose the action of the highest Q-Value
     action_values = [Q_function(state, action_set[0]),
