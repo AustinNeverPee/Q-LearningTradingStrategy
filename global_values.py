@@ -17,7 +17,6 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import learn
 from tensorflow.contrib.learn.python.learn.estimators import model_fn as model_fn_lib
-from tensorflow.contrib.learn.python import SKCompat
 
 import pdb
 
@@ -242,9 +241,9 @@ def Q_function(state, action):
     if path.exists(getcwd() + "/model"):
         # If model already exists, then use the model to predict
         # Create the estimator
-        Q_estimator = SKCompat(learn.Estimator(
+        Q_estimator = learn.Estimator(
             model_fn=cnn_model_fn,
-            model_dir=model_dirs[action]))
+            model_dir=model_dirs[action])
 
         # Predict using the estimator
         predictions = Q_estimator.predict(x=np.float32(state))

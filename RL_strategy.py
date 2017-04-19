@@ -32,7 +32,6 @@ from test import (
 import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import learn
-from tensorflow.contrib.learn.python import SKCompat
 # tf.logging.set_verbosity(tf.logging.INFO)
 
 
