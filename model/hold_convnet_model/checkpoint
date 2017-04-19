@@ -1,3 +1,0 @@
-model_checkpoint_path: "/Users/austin/GitHub/Q-LearningTradingStrategy/model/hold_convnet_model/model.ckpt-100"
-all_model_checkpoint_paths: "/Users/austin/GitHub/Q-LearningTradingStrategy/model/hold_convnet_model/model.ckpt-1"
-all_model_checkpoint_paths: "/Users/austin/GitHub/Q-LearningTradingStrategy/model/hold_convnet_model/model.ckpt-100"

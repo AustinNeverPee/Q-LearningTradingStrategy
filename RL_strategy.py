@@ -32,10 +32,11 @@ from test import (
 import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import learn
-# tf.logging.set_verbosity(tf.logging.INFO)
-
-
+from tensorflow.contrib.learn.python import SKCompat
 import pdb
+
+
+# tf.logging.set_verbosity(tf.logging.INFO)
 
 
 # Training steps
@@ -106,10 +107,11 @@ def Q_update():
     for action in action_set:
         mylogger.logger.info("Update " + action + " model")
 
+        # # Configure a ValidationMonitor with training data
         # validation_monitor = learn.monitors.ValidationMonitor(
-        #     Q_data[action],
-        #     Q_labels[action],
-        #     every_n_steps=50)
+        #     np.float32(Q_data[action]),
+        #     np.float32(Q_labels[action]),
+        #     every_n_steps=20)
 
         # Create the estimator
         Q_estimator = learn.Estimator(
@@ -117,7 +119,7 @@ def Q_update():
             model_dir=model_dirs[action])
 
         # Train the model
-        Q_estimator.fit(
+        SKCompat(Q_estimator).fit(
             x=np.float32(Q_data[action]),
             y=np.float32(Q_labels[action]),
             steps=training_steps)
@@ -127,7 +129,6 @@ def Q_update():
             x=np.float32(Q_data[action]),
             y=np.float32(Q_labels[action]),
             steps=1)
-        print(eval_results)
         mylogger.logger.info(eval_results)
 
 

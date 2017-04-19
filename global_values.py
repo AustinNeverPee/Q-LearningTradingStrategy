@@ -17,7 +17,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import learn
 from tensorflow.contrib.learn.python.learn.estimators import model_fn as model_fn_lib
-
+from tensorflow.contrib.learn.python import SKCompat
 import pdb
 
 
@@ -246,7 +246,7 @@ def Q_function(state, action):
             model_dir=model_dirs[action])
 
         # Predict using the estimator
-        predictions = Q_estimator.predict(x=np.float32(state))
+        predictions = SKCompat(Q_estimator).predict(x=np.float32(state))
 
         return predictions["results"][0]
     else:
