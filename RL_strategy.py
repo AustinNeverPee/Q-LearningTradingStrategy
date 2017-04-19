@@ -21,7 +21,7 @@ from global_values import (
     capital_base,
     model_dirs, Q_data, Q_labels, cnn_model_fn,
     epsilon, action_set, date_prev, action_prev,
-    portfolio_prev, input_fn)
+    portfolio_prev)
 from train import (
     initialize_train,
     handle_data_train)
@@ -40,7 +40,7 @@ import pdb
 
 
 # Training steps
-training_steps = 500
+training_steps = 100
 # Number of agent training
 Q_training_iters = 1000
 
@@ -119,14 +119,17 @@ def Q_update():
 
         # Train the model
         Q_estimator.fit(
-            input_fn=lambda: input_fn(Q_data[action], Q_labels[action]),
+            x=np.float32(Q_data[action]),
+            y=np.float32(Q_labels[action]),
             steps=training_steps)
 
         # Evaluate the model and print results
         eval_results = Q_estimator.evaluate(
-            input_fn=lambda: input_fn(Q_data[action], Q_labels[action]),
+            x=np.float32(Q_data[action]),
+            y=np.float32(Q_labels[action]),
             steps=1)
         print(eval_results)
+        mylogger.logger.info(eval_results)
 
 
 def agent_train(data_train):

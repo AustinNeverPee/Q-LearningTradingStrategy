@@ -219,20 +219,20 @@ action_prev = ''
 portfolio_prev = capital_base
 
 
-def input_fn(_Q_data, _Q_labels):
-    """Construct an input_fn to preprocess and
-       feed data into models
-    """
-    days = _Q_data.shape[0]
-    feature_cols = {}
-    for i in range(0, 18):
-        for j in range(0, 18):
-            # Treat every element of TP Matrix as feature
-            # Up to 18*18 features
-            feature_cols[(i + 1) * (j + 1)] = tf.constant(
-                [_Q_data[d][i][j] for d in range(0, days)])
-    labels = tf.constant(_Q_labels)
-    return feature_cols, labels
+# def input_fn(_Q_data, _Q_labels):
+#     """Construct an input_fn to preprocess and
+#        feed data into models
+#     """
+#     days = _Q_data.shape[0]
+#     feature_cols = {}
+#     for i in range(0, 18):
+#         for j in range(0, 18):
+#             # Treat every element of TP Matrix as feature
+#             # Up to 18*18 features
+#             feature_cols[(i + 1) * (j + 1)] = tf.constant(
+#                 [_Q_data[d][i][j] for d in range(0, days)])
+#     labels = tf.constant(_Q_labels)
+#     return feature_cols, labels
 
 
 def Q_function(state, action):
@@ -247,8 +247,7 @@ def Q_function(state, action):
             model_dir=model_dirs[action]))
 
         # Predict using the estimator
-        predictions = Q_estimator.predict(
-            input_fn=lambda: input_fn(state, [0]))
+        predictions = Q_estimator.predict(x=np.float32(state))
 
         return predictions["results"][0]
     else:
