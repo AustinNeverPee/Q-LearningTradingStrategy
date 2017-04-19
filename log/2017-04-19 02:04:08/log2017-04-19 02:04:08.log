@@ -1,0 +1,9 @@
+2017-04-19 02:04:08,493 - mylogger - INFO - Agent Iteration :1
+2017-04-19 02:04:19,472 - mylogger - INFO - Update sell model
+2017-04-19 02:04:33,830 - mylogger - INFO - Update buy model
+2017-04-19 02:04:46,740 - mylogger - INFO - Update hold model
+2017-04-19 02:05:00,265 - mylogger - INFO - Agent Iteration :2
+2017-04-19 02:11:18,006 - mylogger - INFO - Update sell model
+2017-04-19 02:11:22,093 - mylogger - INFO - Update buy model
+2017-04-19 02:11:26,289 - mylogger - INFO - Update hold model
+2017-04-19 02:11:30,401 - mylogger - INFO - Agent Iteration :3
