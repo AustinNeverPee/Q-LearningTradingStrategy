@@ -1,0 +1,8 @@
+2017-04-22 15:16:26,372 - mylogger - INFO - Agent Iteration :1
+2017-04-22 15:16:38,556 - mylogger - INFO - Update sell model
+2017-04-22 15:16:52,703 - mylogger - INFO - {'loss': 31288946.0, 'global_step': 100}
+2017-04-22 15:16:52,705 - mylogger - INFO - Update buy model
+2017-04-22 15:17:06,610 - mylogger - INFO - {'loss': 34294596.0, 'global_step': 100}
+2017-04-22 15:17:06,610 - mylogger - INFO - Update hold model
+2017-04-22 15:17:20,359 - mylogger - INFO - {'loss': 30536070.0, 'global_step': 100}
+2017-04-22 15:17:20,359 - mylogger - INFO - Agent Iteration :2

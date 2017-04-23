@@ -1,8 +1,6 @@
 """Training of the agent
 
 Author: YANG, Austin Liu
-Created Date: Feb. 26, 2017
-Modified Date: Mar. 6 2017
 """
 
 
@@ -12,79 +10,102 @@ from zipline.api import (
     get_datetime)
 import random
 import numpy as np
-from global_values import (
-    directory_log,
-    TP_matrixs,
-    mu,
-    Q_data, Q_labels,
-    epsilon, action_set, date_prev, action_prev, Q_function,
-    portfolio_prev)
+import global_values as gv
 import pdb
 
 
 # Discount factor
 gama = 0.95
 
+# Data and labels of models
+Q_data = {
+    "sell": np.array([]),
+    "buy": np.array([]),
+    "hold": np.array([])}
+Q_labels = {
+    "sell": np.array([]),
+    "buy": np.array([]),
+    "hold": np.array([])}
 
-def initialize_train(context):
+
+def initialize(context):
     # AAPL
     context.security = symbol('AAPL')
 
-    print(directory_log)
+    # Initialize labeled data
+    global Q_data, Q_labels
+    Q_data = {
+        "sell": np.array([]),
+        "buy": np.array([]),
+        "hold": np.array([])}
+    Q_labels = {
+        "sell": np.array([]),
+        "buy": np.array([]),
+        "hold": np.array([])}
+
+    # Initialize previous date
+    context.date_prev = ''
+
+    # Initialize previous taken action
+    context.action_prev = ''
+
+    # Initialize previous portfolio
+    context.portfolio_prev = gv.capital_base
 
 
-def handle_data_train(context, data):
+def handle_data(context, data):
     # Get current date
     now = str(get_datetime('US/Eastern'))[0:11] + "00:00:00+0000"
 
     # Get current state
-    state = np.float32(TP_matrixs.ix[now].values)
+    state = gv.TP_matrixs.ix[now].values
 
     # Epsilon-greedy Algorithm
     # Choose an action to execute according to current state
     probab = random.random()
-    if probab <= epsilon:
+    if probab <= gv.epsilon:
         # Epsilon
         # Take random action
-        action = action_set[random.randint(0, 2)]
+        action = gv.action_set[random.randint(0, 2)]
     else:
         # 1 - epsilon
         # Take the action of the highest Q-Value
-        action_values = [Q_function(state, action_set[0]),
-                         Q_function(state, action_set[1]),
-                         Q_function(state, action_set[2])]
-        action = action_set[action_values.index(max(action_values))]
+        action_values = [gv.Q_function(state, gv.action_set[0]),
+                         gv.Q_function(state, gv.action_set[1]),
+                         gv.Q_function(state, gv.action_set[2])]
+        action = gv.action_set[action_values.index(max(action_values))]
 
     # Execute chosen action
-    if action == action_set[0]:
+    if action == gv.action_set[0]:
         # Sell
-        order(context.security, -mu)
-    elif action == action_set[1]:
+        order(context.security, -gv.mu)
+    elif action == gv.action_set[1]:
         # Buy
-        order(context.security, mu)
-    elif action == action_set[2]:
+        order(context.security, gv.mu)
+    elif action == gv.action_set[2]:
         # Hold
         pass
 
     # Construct labeled data
-    global date_prev, action_prev, portfolio_prev, Q_data, Q_labels
+    global Q_data, Q_labels
     # Juage if it's the first day
-    if action_prev != "":
+    if context.action_prev != "":
         y = context.portfolio.portfolio_value - \
-            portfolio_prev + gama * Q_function(state, action)
+            context.portfolio_prev + gama * gv.Q_function(state, action)
         # Add new data
-        if Q_data[action_prev].size == 0:
-            Q_data[action_prev] = np.array(
-                [TP_matrixs.ix[date_prev].values.tolist()],
+        if Q_data[context.action_prev].size == 0:
+            Q_data[context.action_prev] = np.array(
+                [gv.TP_matrixs.ix[context.date_prev].values.tolist()],
                 dtype=np.float32)
         else:
-            Q_data[action_prev] = np.vstack((
-                Q_data[action_prev],
-                [TP_matrixs.ix[date_prev].values.tolist()]))
+            Q_data[context.action_prev] = np.vstack((
+                Q_data[context.action_prev],
+                [gv.TP_matrixs.ix[context.date_prev].values.tolist()]))
         # Add new label
-        Q_labels[action_prev] = np.append(Q_labels[action_prev], y)
+        Q_labels[context.action_prev] = np.append(
+            Q_labels[context.action_prev], y)
 
     # Update saved previous information
-    date_prev = now
-    action_prev = action
-    portfolio_prev = context.portfolio.portfolio_value
+    context.date_prev = now
+    context.action_prev = action
+    context.portfolio_prev = context.portfolio.portfolio_value

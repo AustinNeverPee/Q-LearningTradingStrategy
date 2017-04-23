@@ -1,8 +1,6 @@
 """Testing of the agent
 
 Author: YANG, Austin Liu
-Created Date: Feb. 26, 2017
-Modified Date: Mar. 6 2017
 """
 
 
@@ -15,14 +13,10 @@ from zipline.api import (
     set_long_only)
 import matplotlib.pyplot as plt
 import pandas as pd
-from global_values import (
-    mylogger, directory_log,
-    TP_matrixs,
-    capital_base, mu,
-    action_set, Q_function)
+import global_values as gv
 
 
-def initialize_test(context):
+def initialize(context):
     # AAPL
     context.security = symbol('AAPL')
 
@@ -31,41 +25,42 @@ def initialize_test(context):
     set_long_only()
 
 
-def handle_data_test(context, data):
+def handle_data(context, data):
     # Get current date
     now = str(get_datetime('US/Eastern'))[0:11] + "00:00:00+0000"
 
     # Get current state
-    state = TP_matrixs.ix[now]
+    state = gv.TP_matrixs.ix[now].values
 
     # Choose the action of the highest Q-Value
-    action_values = [Q_function(state, action_set[0]),
-                     Q_function(state, action_set[1]),
-                     Q_function(state, action_set[2])]
-    action = action_set[action_values.index(max(action_values))]
+    action_values = [gv.Q_function(state, gv.action_set[0]),
+                     gv.Q_function(state, gv.action_set[1]),
+                     gv.Q_function(state, gv.action_set[2])]
+    gv.mylogger.logger.info(action_values)
+    action = gv.action_set[action_values.index(max(action_values))]
 
     # Execute chosen action
     now = now[0: 10]
-    if action == action_set[0]:
+    if action == gv.action_set[0]:
         # Sell
         # No short
         try:
-            order(context.security, -mu)
-            mylogger.logger.info(now + ': sell')
+            order(context.security, -gv.mu)
+            gv.mylogger.logger.info(now + ': sell')
         except Exception as e:
-            mylogger.logger.info(now + ': No short!')
-    elif action == action_set[1]:
+            gv.mylogger.logger.info(now + ': No short!')
+    elif action == gv.action_set[1]:
         # Buy
         # No cover
-        if context.portfolio.cash >= data.current(context.security, 'price') * mu:
-            order(context.security, mu)
-            mylogger.logger.info(now + ': buy')
-            mylogger.logger.info(context.portfolio.cash)
+        if context.portfolio.cash >= data.current(context.security, 'price') * gv.mu:
+            order(context.security, gv.mu)
+            gv.mylogger.logger.info(now + ': buy')
+            gv.mylogger.logger.info(context.portfolio.cash)
         else:
-            mylogger.logger.info(now + ': No cover!')
-    elif action == action_set[2]:
+            gv.mylogger.logger.info(now + ': No cover!')
+    elif action == gv.action_set[2]:
         # Hold
-        mylogger.logger.info(now + ': hold')
+        gv.mylogger.logger.info(now + ': hold')
         pass
 
     # Save values for later inspection
@@ -73,11 +68,12 @@ def handle_data_test(context, data):
            actions=action)
 
 
-def analyze_test(context=None, results=None):
+def analyze(context=None, results=None):
     """Anylyze the result of algorithm"""
     # Total profit and loss
-    total_pl = (results['portfolio_value'][-1] - capital_base) / capital_base
-    mylogger.logger.info('Total profit and loss: ' + str(total_pl))
+    total_pl = (results['portfolio_value'][-1] -
+                gv.capital_base) / gv.capital_base
+    gv.mylogger.logger.info('Total profit and loss: ' + str(total_pl))
 
     # Hit rate by day
     hit_num = 0
@@ -103,15 +99,15 @@ def analyze_test(context=None, results=None):
     hit_data = {'signal': actions.values,
                 'hit/miss': hit_record.values}
     hit_table = pd.DataFrame(hit_data, index=hit_record.index)
-    mylogger.logger.info('Hit table:')
-    mylogger.logger.info('Date          signal  hit/miss')
+    gv.mylogger.logger.info('Hit table:')
+    gv.mylogger.logger.info('Date          signal  hit/miss')
     for i in range(0, len(hit_table)):
-        mylogger.logger.info(str(hit_table.index[i])[0: 10] + '    ' +
-                             str(hit_table['signal'][i]) + '    ' +
-                             str(hit_table['hit/miss'][i]))
-    mylogger.logger.info('Hit number:' + str(hit_num) +
-                         '/' + str(len(hit_record)))
-    mylogger.logger.info('Hit rate:' + str(hit_rate))
+        gv.mylogger.logger.info(str(hit_table.index[i])[0: 10] + '    ' +
+                                str(hit_table['signal'][i]) + '    ' +
+                                str(hit_table['hit/miss'][i]))
+    gv.mylogger.logger.info('Hit number:' + str(hit_num) +
+                            '/' + str(len(hit_record)))
+    gv.mylogger.logger.info('Hit rate:' + str(hit_rate))
 
     # Draw the figure
     fig = plt.figure(figsize=(12, 7))
@@ -130,8 +126,8 @@ def analyze_test(context=None, results=None):
     share_number = 0
     for day in stock_value.index:
         if flag_first:
-            share_number = capital_base / stock_value[day]
-            stock_value[day] = capital_base
+            share_number = gv.capital_base / stock_value[day]
+            stock_value[day] = gv.capital_base
             flag_first = False
         else:
             stock_value[day] *= share_number
@@ -177,7 +173,7 @@ def analyze_test(context=None, results=None):
     plt.legend(loc='upper left')
 
     # Save figure into file
-    fig_name = 'log/' + directory_log + '/fig' + directory_log + '.png'
+    fig_name = 'log/' + gv.directory_log + '/fig' + gv.directory_log + '.png'
     plt.savefig(fig_name)
 
     # Show figure on the screen

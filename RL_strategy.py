@@ -1,13 +1,12 @@
 """Q-Learning Stock Trading Algorithm
-State: {p0, p1, ..., pt}
+State: TP Matrix
 Action: {buy, sell, hold}
 Reward: difference between current and previous portfolio value
-Approximate function: Neural Network
+Approximate function: Convolutional Neural Network
 Train agent for only one stock
 Using epsilon-greedy algorithm to train
 
 Author: YANG, Austin Liu
-Created Date: Feb. 26, 2017
 """
 
 
@@ -16,21 +15,10 @@ from datetime import datetime
 from zipline.algorithm import TradingAlgorithm
 from zipline.utils.factory import load_bars_from_yahoo
 import os
-from global_values import (
-    mylogger, directory_log,
-    capital_base,
-    model_dirs, Q_data, Q_labels, cnn_model_fn,
-    epsilon, action_set, date_prev, action_prev,
-    portfolio_prev)
-from train import (
-    initialize_train,
-    handle_data_train)
-from test import (
-    initialize_test,
-    handle_data_test,
-    analyze_test)
+import global_values as gv
+import train
+import test
 import numpy as np
-import tensorflow as tf
 from tensorflow.contrib import learn
 from tensorflow.contrib.learn.python import SKCompat
 import pdb
@@ -42,16 +30,16 @@ import pdb
 # Training steps
 training_steps = 100
 # Number of agent training
-Q_training_iters = 1000
+Q_training_iters = 5
 
 
 def initialize_log():
     """Initialize log module"""
     # Create log directory
-    os.makedirs('log/' + directory_log)
+    os.makedirs('log/' + gv.directory_log)
 
     # Add file handle to mylogger
-    mylogger.addFileHandler(directory_log)
+    gv.mylogger.addFileHandler(gv.directory_log)
 
 
 def load_data():
@@ -76,36 +64,12 @@ def load_data():
     return [data_train, data_test]
 
 
-def initialize_params_train(iter):
-    """Initialize parameters used in training"""
-    # Initialize labeled data
-    global Q_data, Q_labels
-    Q_data = {
-        "sell": np.array([], dtype=np.float32),
-        "buy": np.array([], dtype=np.float32),
-        "hold": np.array([], dtype=np.float32)}
-    Q_labels = {
-        "sell": np.array([], dtype=np.float32),
-        "buy": np.array([], dtype=np.float32),
-        "hold": np.array([], dtype=np.float32)}
-
-    # Initialize saved previous information
-    global date_prev, state_prev, portfolio_prev
-    date_prev = ''
-    state_prev = []
-    portfolio_prev = capital_base
-
-    # Update epsilon
-    global epsilon
-    epsilon = pow(epsilon, iter + 1)
-
-
 def Q_update():
     """Update weights of three models:
        "sell" model, "buy" model and "hold" model
     """
-    for action in action_set:
-        mylogger.logger.info("Update " + action + " model")
+    for action in gv.action_set:
+        gv.mylogger.logger.info("Update " + action + " model")
 
         # # Configure a ValidationMonitor with training data
         # validation_monitor = learn.monitors.ValidationMonitor(
@@ -115,21 +79,20 @@ def Q_update():
 
         # Create the estimator
         Q_estimator = learn.Estimator(
-            model_fn=cnn_model_fn,
-            model_dir=model_dirs[action])
+            model_fn=gv.cnn_model_fn,
+            model_dir=gv.model_dirs[action])
 
         # Train the model
         SKCompat(Q_estimator).fit(
-            x=np.float32(Q_data[action]),
-            y=np.float32(Q_labels[action]),
+            x=train.Q_data[action].astype(np.float32),
+            y=train.Q_labels[action].astype(np.float32),
             steps=training_steps)
 
         # Evaluate the model and print results
         eval_results = Q_estimator.evaluate(
-            x=np.float32(Q_data[action]),
-            y=np.float32(Q_labels[action]),
-            steps=1)
-        mylogger.logger.info(eval_results)
+            x=train.Q_data[action].astype(np.float32),
+            y=train.Q_labels[action].astype(np.float32))
+        gv.mylogger.logger.info(eval_results)
 
 
 def agent_train(data_train):
@@ -137,14 +100,14 @@ def agent_train(data_train):
        Learn from the environment
     """
     for iter in range(0, Q_training_iters):
-        mylogger.logger.info("Agent Iteration :" + str(iter + 1))
+        gv.mylogger.logger.info("Agent Iteration :" + str(iter + 1))
 
         # Create algorithm object passing in initialize,
         # handle_data functions and so on
-        algo = TradingAlgorithm(initialize=initialize_train,
-                                handle_data=handle_data_train,
+        algo = TradingAlgorithm(initialize=train.initialize,
+                                handle_data=train.handle_data,
                                 data_frequency='daily',
-                                capital_base=capital_base)
+                                capital_base=gv.capital_base)
 
         # Run algorithm
         perf = algo.run(data_train)
@@ -152,8 +115,8 @@ def agent_train(data_train):
         # Train neural network with produced training set
         Q_update()
 
-        # Initialize parameters used in training
-        initialize_params_train(iter)
+        # Update epsilon
+        gv.epsilon = pow(gv.epsilon, iter + 2)
 
 
 def agent_test(data_test):
@@ -162,11 +125,11 @@ def agent_test(data_test):
     """
     # Create algorithm object passing in initialize and
     # handle_data functions
-    algo_obj = TradingAlgorithm(initialize=initialize_test,
-                                handle_data=handle_data_test,
-                                analyze=analyze_test,
+    algo_obj = TradingAlgorithm(initialize=test.initialize,
+                                handle_data=test.handle_data,
+                                analyze=test.analyze,
                                 data_frequency='daily',
-                                capital_base=capital_base)
+                                capital_base=gv.capital_base)
 
     # Run algorithm
     perf = algo_obj.run(data_test)

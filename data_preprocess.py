@@ -2,7 +2,6 @@
 Preprocess raw price data into the form of TP Matrix
 
 Author: YANG, Austin Liu
-Created Date: Mar. 21, 2017
 """
 
 import numpy as np

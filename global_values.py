@@ -2,7 +2,6 @@
 Variables and functions
 
 Author: YANG, Austin Liu
-Created Date: Feb. 26, 2017
 """
 
 
@@ -72,15 +71,6 @@ model_dirs = {
     "sell": getcwd() + "/model/sell_convnet_model",
     "buy": getcwd() + "/model/buy_convnet_model",
     "hold": getcwd() + "/model/hold_convnet_model"}
-# Data and labels of models
-Q_data = {
-    "sell": np.array([], dtype=np.float32),
-    "buy": np.array([], dtype=np.float32),
-    "hold": np.array([], dtype=np.float32)}
-Q_labels = {
-    "sell": np.array([], dtype=np.float32),
-    "buy": np.array([], dtype=np.float32),
-    "hold": np.array([], dtype=np.float32)}
 
 
 def cnn_model_fn(features, labels, mode):
@@ -210,12 +200,6 @@ epsilon = 0.955
 # Action set
 # Contain all the possible actions to execute in each state
 action_set = ['sell', 'buy', 'hold']
-# Previous date
-date_prev = []
-# Previous taken action
-action_prev = ''
-# Previous portfolio
-portfolio_prev = capital_base
 
 
 # def input_fn(_Q_data, _Q_labels):
@@ -239,16 +223,16 @@ def Q_function(state, action):
        Use trained models to predict
     """
     if path.exists(getcwd() + "/model"):
-        # If model already exists, then use the model to predict
+        # If model already exists, use the model to predict
         # Create the estimator
         Q_estimator = learn.Estimator(
             model_fn=cnn_model_fn,
             model_dir=model_dirs[action])
 
         # Predict using the estimator
-        predictions = SKCompat(Q_estimator).predict(x=np.float32(state))
+        predictions = SKCompat(Q_estimator).predict(x=state.astype(np.float32))
 
-        return predictions["results"][0]
+        return predictions["results"][0][0]
     else:
         # If model doesn't exist, just return random value
         return uniform(-10000, 10000)

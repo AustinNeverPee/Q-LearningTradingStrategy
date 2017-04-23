@@ -1,0 +1,35 @@
+2017-04-23 16:53:32,485 - mylogger - INFO - Agent Iteration :1
+2017-04-23 16:53:44,144 - mylogger - INFO - Update sell model
+2017-04-23 16:53:58,443 - mylogger - INFO - {'global_step': 100, 'loss': 35047092.0}
+2017-04-23 16:53:58,443 - mylogger - INFO - Update buy model
+2017-04-23 16:54:13,977 - mylogger - INFO - {'global_step': 100, 'loss': 35179080.0}
+2017-04-23 16:54:13,977 - mylogger - INFO - Update hold model
+2017-04-23 16:54:28,081 - mylogger - INFO - {'global_step': 100, 'loss': 37898664.0}
+2017-04-23 16:54:28,081 - mylogger - INFO - Agent Iteration :2
+2017-04-23 17:02:22,313 - mylogger - INFO - Update sell model
+2017-04-23 17:02:37,200 - mylogger - INFO - {'global_step': 200, 'loss': 6610722.5}
+2017-04-23 17:02:37,200 - mylogger - INFO - Update buy model
+2017-04-23 17:02:52,347 - mylogger - INFO - {'global_step': 200, 'loss': 3669743.5}
+2017-04-23 17:02:52,347 - mylogger - INFO - Update hold model
+2017-04-23 17:03:06,000 - mylogger - INFO - {'global_step': 200, 'loss': 7783421.5}
+2017-04-23 17:03:06,000 - mylogger - INFO - Agent Iteration :3
+2017-04-23 17:13:39,678 - mylogger - INFO - Update sell model
+2017-04-23 17:13:53,776 - mylogger - INFO - {'global_step': 300, 'loss': 15662120.0}
+2017-04-23 17:13:53,777 - mylogger - INFO - Update buy model
+2017-04-23 17:14:07,994 - mylogger - INFO - {'global_step': 300, 'loss': 8896046.0}
+2017-04-23 17:14:07,994 - mylogger - INFO - Update hold model
+2017-04-23 17:14:23,195 - mylogger - INFO - {'global_step': 300, 'loss': 11499363.0}
+2017-04-23 17:14:23,195 - mylogger - INFO - Agent Iteration :4
+2017-04-23 17:32:48,653 - mylogger - INFO - Update sell model
+2017-04-23 17:33:02,777 - mylogger - INFO - {'global_step': 400, 'loss': 369274.56}
+2017-04-23 17:33:02,777 - mylogger - INFO - Update buy model
+2017-04-23 17:33:17,319 - mylogger - INFO - {'global_step': 400, 'loss': 228118.66}
+2017-04-23 17:33:17,319 - mylogger - INFO - Update hold model
+2017-04-23 17:33:31,635 - mylogger - INFO - {'global_step': 400, 'loss': 481069.59}
+2017-04-23 17:33:31,635 - mylogger - INFO - Agent Iteration :5
+2017-04-23 17:57:48,160 - mylogger - INFO - Update sell model
+2017-04-23 17:58:03,095 - mylogger - INFO - {'global_step': 500, 'loss': 4.3431725e+08}
+2017-04-23 17:58:03,095 - mylogger - INFO - Update buy model
+2017-04-23 17:58:16,609 - mylogger - INFO - {'global_step': 500, 'loss': 5.1957296e+08}
+2017-04-23 17:58:16,609 - mylogger - INFO - Update hold model
+2017-04-23 17:58:22,465 - mylogger - INFO - {'global_step': 500, 'loss': 2.0219109e+08}

@@ -1,7 +1,6 @@
 """Log module
 
 Author: YANG, Austin Liu
-Created Date: Mar. 7, 2017
 """
 
 
